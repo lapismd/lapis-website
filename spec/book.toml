@@ -1,0 +1,6 @@
+[book]
+title = "Lapis Website specification"
+src = "src"
+language = "en"
+[build]
+build-dir = "book"

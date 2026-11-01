@@ -1,0 +1,113 @@
+---
+import config from "virtual:starlight/user-config";
+
+import LanguageSelect from "@astrojs/starlight/components/LanguageSelect.astro";
+import Search from "@astrojs/starlight/components/Search.astro";
+import SiteTitle from "@astrojs/starlight/components/SiteTitle.astro";
+import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
+import ThemeSelect from "./LapisStarlightThemeSelect.astro";
+import { isSiteNavActive } from "../lib/site-nav";
+
+const shouldRenderSearch =
+  config.pagefind ||
+  config.components.Search !== "@astrojs/starlight/components/Search.astro";
+
+const pathname = Astro.url.pathname;
+
+const legalNav = [
+  { href: "/license/", label: "License" },
+  { href: "/terms/", label: "Terms" },
+  { href: "/privacy/", label: "Privacy" },
+];
+---
+
+<div class="header">
+  <div class="title-wrapper sl-flex">
+    <SiteTitle />
+  </div>
+  <div class="sl-flex print:hidden">
+    {shouldRenderSearch && <Search />}
+  </div>
+  <div class="sl-hidden md:sl-flex print:hidden right-group">
+    <nav class="legal-links" aria-label="Legal">
+      {
+        legalNav.map((link) => (
+          <a
+            href={link.href}
+            class="site-nav-link"
+            aria-current={
+              isSiteNavActive(link.href, pathname) ? "page" : undefined
+            }
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="sl-flex social-icons">
+      <SocialIcons />
+    </div>
+    <ThemeSelect />
+    <LanguageSelect />
+  </div>
+</div>
+
+<style>
+  @layer starlight.core {
+    .header {
+      display: flex;
+      gap: var(--sl-nav-gap);
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .title-wrapper {
+      overflow: clip;
+      padding: 0.25rem;
+      margin: -0.25rem;
+      min-width: 0;
+    }
+
+    .right-group,
+    .social-icons,
+    .legal-links {
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .legal-links {
+      display: flex;
+    }
+
+    .legal-links .site-nav-link {
+      font-size: 0.875rem;
+    }
+
+    .social-icons::after {
+      content: "";
+      height: 2rem;
+      border-inline-end: 1px solid var(--sl-color-gray-5);
+    }
+
+    @media (min-width: 50rem) {
+      :global(:root[data-has-sidebar]) {
+        --__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+      }
+
+      :global(:root:not([data-has-toc])) {
+        --__toc-width: 0rem;
+      }
+
+      .header {
+        --__sidebar-width: max(
+          0rem,
+          var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x)
+        );
+        display: grid;
+        grid-template-columns: minmax(var(--__sidebar-width), auto) 1fr auto;
+        align-content: center;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,137 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+
+const lastUpdated = "November 1, 2026";
+---
+
+<SiteLayout title="Privacy - Lapis Notes">
+  <main class="legal-main">
+    <header class="legal-hero">
+      <p class="landing-eyebrow">Privacy</p>
+      <h1>Privacy</h1>
+      <p class="legal-dek">
+        Lapis Notes is designed around local files and local app state. This
+        page explains what stays on your device, what can leave it, and where
+        third parties may be involved.
+      </p>
+      <p class="legal-meta">Last updated {lastUpdated}</p>
+    </header>
+
+    <div class="legal-content">
+      <section class="legal-section" aria-labelledby="summary">
+        <h2 id="summary">Summary</h2>
+        <div class="legal-summary-grid">
+          <article class="legal-card">
+            <h3>Your vault is local</h3>
+            <p>
+              Notes, attachments, and vault folders are stored in the location
+              you choose: a browser-local vault, a browser folder handle, or a
+              desktop filesystem folder.
+            </p>
+          </article>
+          <article class="legal-card">
+            <h3>No hosted account required</h3>
+            <p>
+              Lapis does not currently operate accounts, hosted sync, hosted
+              vault storage, or payment services for the app.
+            </p>
+          </article>
+          <article class="legal-card">
+            <h3>Network use is feature-specific</h3>
+            <p>
+              Optional AI providers, model downloads, plugin installation,
+              external content, and configured repository backup can connect to
+              outside services. Review the settings and the destination before
+              enabling them.
+            </p>
+          </article>
+          <article class="legal-card">
+            <h3>Plugins can change the picture</h3>
+            <p>
+              Community plugins, embedded web content, remote notebook packages,
+              and external links may make their own network requests.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="legal-section" aria-labelledby="local-data">
+        <h2 id="local-data">Information Stored Locally</h2>
+        <p>
+          The app stores vault content locally. Browser vaults may use Origin
+          Private File System, IndexedDB, or File System Access handles. Desktop
+          vaults use folders you select on the filesystem.
+        </p>
+        <p>
+          Lapis also creates local generated state such as settings, workspace
+          layout, search indexes, metadata caches, recent vault records, and app
+          diagnostics. Desktop builds may store generated app state outside the
+          selected vault in the operating system's app data directory.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="network">
+        <h2 id="network">When Network Requests Happen</h2>
+        <p>
+          Opening the website or web app loads static files from lapis.md or
+          app.lapis.md. The hosting provider may process normal request data
+          such as IP address, user agent, URL, timestamp, and security logs.
+        </p>
+        <p>
+          The app can also connect to the network when you open external links,
+          embed remote content, install or run plugins that use the network, run
+          notebook cells that import remote packages or assets, fetch optional
+          model assets, configure a repository remote or AI provider, or choose
+          to send information through a bug report or community channel.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="plugins">
+        <h2 id="plugins">Plugins And Third Parties</h2>
+        <p>
+          First-party bundled plugins are part of the app. Community plugins and
+          other third-party services are controlled by their own authors and may
+          have separate privacy practices. Review plugin source, permissions,
+          and network behavior before installing or enabling plugins you do not
+          trust.
+        </p>
+        <p>
+          Links to the project repository, community spaces, package CDNs, model
+          hosts, or other services are handled by those services under their own
+          policies.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="deleting">
+        <h2 id="deleting">Access, Deletion, And Backups</h2>
+        <p>
+          Because your vault data is local, you control access to it through
+          your device, browser profile, filesystem permissions, backups, and any
+          sync tool you use outside Lapis. Deleting a local vault or browser
+          site data removes the corresponding local data from that environment.
+        </p>
+        <p>
+          If you send information to maintainers through the project repository,
+          email, or a community channel, use that same channel to request
+          correction or removal where the service allows it.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="changes">
+        <h2 id="changes">Changes To This Policy</h2>
+        <p>
+          This policy should change when Lapis adds hosted accounts, hosted
+          sync, payments, new telemetry defaults, or other services that
+          materially affect privacy. The latest version will be published on
+          this page.
+        </p>
+        <div class="legal-links-row">
+          <a class="site-button site-button--secondary" href="/terms/">Terms</a>
+          <a class="site-button site-button--secondary" href="/license/"
+            >License</a
+          >
+        </div>
+      </section>
+    </div>
+  </main>
+</SiteLayout>

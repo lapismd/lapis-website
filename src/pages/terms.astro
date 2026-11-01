@@ -1,0 +1,141 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+
+const lastUpdated = "November 1, 2026";
+---
+
+<SiteLayout title="Terms - Lapis Notes">
+  <main class="legal-main">
+    <header class="legal-hero">
+      <p class="landing-eyebrow">Terms</p>
+      <h1>Terms</h1>
+      <p class="legal-dek">
+        These terms describe the basic rules for using the Lapis Notes website,
+        documentation, web app, desktop app, and project resources.
+      </p>
+      <p class="legal-meta">Last updated {lastUpdated}</p>
+    </header>
+
+    <div class="legal-content">
+      <section class="legal-section" aria-labelledby="agreement">
+        <h2 id="agreement">Agreement</h2>
+        <p>
+          By using Lapis Notes or the lapis.md website, you agree to these
+          terms, the <a href="/privacy/">Privacy</a> page, and the open-source and
+          content licenses that apply to the materials you use. If you do not agree,
+          do not use the app or site.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="services">
+        <h2 id="services">What Lapis Provides</h2>
+        <p>
+          Lapis Notes provides a local-first notes app, public documentation,
+          source code, developer APIs, and project resources. The web app and
+          desktop app are provided as software you run in your own browser or on
+          your own device.
+        </p>
+        <p>
+          Lapis does not currently provide hosted vault storage, hosted sync,
+          accounts, subscriptions, or payment processing. If those services are
+          added later, these terms and the privacy page should be updated before
+          they are offered publicly.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="your-content">
+        <h2 id="your-content">Your Content And Responsibilities</h2>
+        <p>
+          You keep ownership of the notes, files, attachments, notebooks, and
+          other content you create or open with Lapis Notes. You are responsible
+          for your content, your backups, and your compliance with laws and
+          third party rights that apply to your work.
+        </p>
+        <p>
+          Do not use the app, site, or project infrastructure to harm systems,
+          violate rights, distribute unlawful content, or interfere with other
+          users or maintainers.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="licenses">
+        <h2 id="licenses">Licenses And Ownership</h2>
+        <p>
+          Lapis Notes is distributed under multiple licenses by package and
+          content type. The license overview explains the core app, plugin API,
+          docs, examples, third-party code, and trademark boundaries.
+        </p>
+        <div class="legal-links-row">
+          <a class="site-button site-button--secondary" href="/license/"
+            >Read the license overview</a
+          >
+        </div>
+      </section>
+
+      <section class="legal-section" aria-labelledby="plugins">
+        <h2 id="plugins">Plugins, Code Execution, And Third Parties</h2>
+        <p>
+          Plugins, notebook cells, embeds, links, package CDNs, model hosts, and
+          other third-party services can execute code, load remote resources, or
+          process data outside the core app. You are responsible for deciding
+          what plugins and code to trust.
+        </p>
+        <p>
+          Lapis is not responsible for third-party plugins, third-party
+          services, or content reached through external links.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="availability">
+        <h2 id="availability">Availability And Changes</h2>
+        <p>
+          The app and site are provided as they are available. Features, routes,
+          documentation, package boundaries, and distribution builds may change,
+          be removed, or stop working. Static web hosting and third-party
+          dependencies may also be unavailable from time to time.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="disclaimer">
+        <h2 id="disclaimer">No Warranties</h2>
+        <p>
+          Lapis Notes is provided "as is" and "as available" without warranties
+          of any kind to the maximum extent allowed by law. The app may contain
+          bugs, data loss risks, compatibility issues, security issues, or
+          documentation errors.
+        </p>
+        <p>
+          You should keep independent backups of important vaults and test
+          workflows before relying on them for critical work.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="liability">
+        <h2 id="liability">Limitation Of Liability</h2>
+        <p>
+          To the maximum extent allowed by law, Lapis Notes contributors and
+          maintainers are not liable for indirect, incidental, special,
+          consequential, exemplary, or punitive damages, or for lost data, lost
+          profits, business interruption, or security incidents arising from
+          your use of the app, site, docs, plugins, or third-party services.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="updates">
+        <h2 id="updates">Updates To These Terms</h2>
+        <p>
+          The latest terms will be published on this page. Continued use of the
+          app or site after changes means you accept the updated terms.
+        </p>
+        <div class="legal-links-row">
+          <a class="site-button site-button--secondary" href="/privacy/"
+            >Privacy</a
+          >
+          <a class="site-button site-button--secondary" href="/license/"
+            >License</a
+          >
+        </div>
+      </section>
+    </div>
+  </main>
+</SiteLayout>

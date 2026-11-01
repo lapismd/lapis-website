@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.local/
+test-results/
+playwright-report/
+spec/book/
+.DS_Store
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
+.qmd/index.sqlite*
+.qmd/index-*.sqlite*

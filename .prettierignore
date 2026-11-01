@@ -1,0 +1,12 @@
+pnpm-lock.yaml
+public/media/
+patches/
+snapshots/api/
+src/content/docs/developers/api-reference/
+.local/
+spec/book/
+dist/
+.astro/
+.wrangler/
+test-results/
+playwright-report/

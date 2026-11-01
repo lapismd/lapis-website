@@ -1,0 +1,441 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+
+const appUrl = "/help/getting-started/download-and-install/";
+---
+
+<SiteLayout title="Lapis Notes — a local-first desktop workspace">
+  <main class="landing-main">
+    <section class="landing-section landing-hero">
+      <div class="landing-hero__copy">
+        <p class="landing-kicker">Local files. Markdown. Extensible views.</p>
+        <h1>Sharpen your notes.</h1>
+        <p class="landing-hero__dek">
+          Lapis Notes brings Markdown files, linked notes, and extensible views
+          together in a local-first workspace. The Tauri Desktop app is
+          currently a preview.
+        </p>
+        <div class="landing-actions">
+          <a class="site-button site-button--primary" href={appUrl}
+            >Explore Desktop</a
+          >
+          <a
+            class="site-button site-button--secondary"
+            href="/help/getting-started/create-a-vault/"
+          >
+            Read help
+          </a>
+          <a class="site-button site-button--secondary" href="/developers/"
+            >Build plugins</a
+          >
+        </div>
+        <ul class="landing-proof-list">
+          <li>Ordinary Markdown files and folders</li>
+          <li>
+            Search, graph, and rich editing, with independently installed
+            plugins
+          </li>
+          <li>A native Desktop preview for filesystem vaults</li>
+        </ul>
+      </div>
+
+      <figure class="landing-shot" aria-label="Lapis Notes workspace preview">
+        <div class="landing-window">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>Notes</strong>
+        </div>
+        <img
+          class="landing-shot__image"
+          src="/media/desktop-workspace.light.webp"
+          data-product-theme="light"
+          alt="Lapis Notes workspace with the file explorer beside a rendered note."
+          loading="eager"
+        /><img
+          class="landing-shot__image"
+          src="/media/desktop-workspace.dark.webp"
+          data-product-theme="dark"
+          alt="Lapis Notes workspace with the file explorer beside a rendered note."
+          loading="eager"
+        />
+      </figure>
+    </section>
+
+    <section class="landing-section landing-band">
+      <div class="landing-band__copy">
+        <p class="landing-eyebrow">Editing that stays portable</p>
+        <h2>Use the markdown features you already rely on.</h2>
+        <p>
+          Lapis keeps the note itself primary, then layers live preview, embeds,
+          properties, callouts, math, Mermaid, checklists, and code blocks over
+          the same file.
+        </p>
+        <ul class="landing-feature-list">
+          <li>Wikilinks, embeds, tags, and frontmatter-backed properties</li>
+          <li>Tables, task lists, callouts, math blocks, and diagram fences</li>
+          <li>Readable source plus richer rendered views when they help</li>
+        </ul>
+        <div class="landing-inline-actions">
+          <a
+            class="site-button site-button--secondary"
+            href="/help/editing/markdown-basics/"
+          >
+            Explore editing docs
+          </a>
+        </div>
+      </div>
+      <figure
+        class="landing-shot landing-shot--feature"
+        aria-label="Markdown editing preview"
+      >
+        <div class="landing-window">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>Notes</strong>
+        </div>
+        <img
+          class="landing-shot__image"
+          src="/media/markdown-overview.light.webp"
+          data-product-theme="light"
+          alt="A rendered note with tables, callouts, and checklist items inside the Lapis Notes workspace."
+          loading="lazy"
+        /><img
+          class="landing-shot__image"
+          src="/media/markdown-overview.dark.webp"
+          data-product-theme="dark"
+          alt="A rendered note with tables, callouts, and checklist items inside the Lapis Notes workspace."
+          loading="lazy"
+        />
+      </figure>
+    </section>
+
+    <section class="landing-section landing-band landing-band--reverse">
+      <figure
+        class="landing-shot landing-shot--feature"
+        aria-label="Graph and canvas preview"
+      >
+        <div class="landing-window">
+          <span></span>
+          <span></span>
+          <span></span>
+          <strong>Graph &amp; canvas</strong>
+        </div>
+        <img
+          class="landing-shot__image"
+          src="/media/graph-banner.light.webp"
+          data-product-theme="light"
+          alt="Graph view showing relationships between notes in a Lapis workspace."
+          loading="lazy"
+        /><img
+          class="landing-shot__image"
+          src="/media/graph-banner.dark.webp"
+          data-product-theme="dark"
+          alt="Graph view showing relationships between notes in a Lapis workspace."
+          loading="lazy"
+        />
+      </figure>
+      <div class="landing-band__copy">
+        <p class="landing-eyebrow">Move between views</p>
+        <h2>Switch from linear notes to spatial and structured tools.</h2>
+        <p>
+          Follow links in graph view, arrange material on canvas boards, and
+          turn note metadata into bases without moving work into a separate
+          database.
+        </p>
+        <div class="landing-stack-grid">
+          <article class="landing-stack-card">
+            <h3>Graph and canvas</h3>
+            <p>
+              Explore relationships across the vault, then pin notes, files, and
+              ideas into a board when layout matters more than document order.
+            </p>
+          </article>
+          <article class="landing-stack-card">
+            <h3>Bases and tasks</h3>
+            <p>
+              Build tables and cards from note properties with Bases. Tasks
+              provides indexing and query tools; dedicated Tasks workspace views
+              are still planned.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="landing-section landing-widget-section"
+      aria-labelledby="landing-views-title"
+    >
+      <div class="landing-widget-section__copy">
+        <p class="landing-eyebrow">Rich views, same files</p>
+        <h2 id="landing-views-title">
+          Preview notes, follow links, and lay out a board in the app.
+        </h2>
+        <p>
+          Markdown previews, graph relationships, and canvas boards all read
+          from the same vault files you edit elsewhere in the workspace.
+        </p>
+      </div>
+
+      <div class="landing-showcase-rows">
+        <article class="landing-band">
+          <div class="landing-band__copy">
+            <h3>Readable Markdown previews</h3>
+            <p>
+              Tables, callouts, math, checklists, and code blocks render from
+              the same note content you keep in your vault.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Markdown preview"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Notes</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/markdown-overview.light.webp"
+              data-product-theme="light"
+              alt="A rendered note with tables, callouts, and checklist items inside the Lapis Notes workspace."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/markdown-overview.dark.webp"
+              data-product-theme="dark"
+              alt="A rendered note with tables, callouts, and checklist items inside the Lapis Notes workspace."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+
+        <article class="landing-band landing-band--reverse">
+          <div class="landing-band__copy">
+            <h3>See how notes connect</h3>
+            <p>
+              Follow internal links, embeds, tags, and unresolved references
+              across the vault in one relationship map.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Graph view"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Graph</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/graph-overview.light.webp"
+              data-product-theme="light"
+              alt="Graph view showing linked notes, tags, and unresolved references across a vault."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/graph-overview.dark.webp"
+              data-product-theme="dark"
+              alt="Graph view showing linked notes, tags, and unresolved references across a vault."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+
+        <article class="landing-band">
+          <div class="landing-band__copy">
+            <h3>Arrange work on a board</h3>
+            <p>
+              Pin notes, tasks, and links on a canvas when spatial layout helps
+              you plan or review a project.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Canvas board"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Canvas</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/canvas-banner.light.webp"
+              data-product-theme="light"
+              alt="A canvas board with linked notes, text cards, and connectors in the Lapis Notes workspace."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/canvas-banner.dark.webp"
+              data-product-theme="dark"
+              alt="A canvas board with linked notes, text cards, and connectors in the Lapis Notes workspace."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section
+      class="landing-section landing-evidence"
+      aria-label="Workspace evidence"
+    >
+      <div class="landing-showcase-rows">
+        <article class="landing-band">
+          <div class="landing-band__copy">
+            <p class="landing-eyebrow">Structured note views</p>
+            <h3>Bases keep metadata useful without giving up files.</h3>
+            <p>
+              Turn frontmatter and task-note metadata into table and card views
+              while keeping everything backed by ordinary vault content.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Bases table view"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Bases</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/bases-banner.light.webp"
+              data-product-theme="light"
+              alt="A Bases table view built from Markdown note properties inside a Lapis Notes workspace."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/bases-banner.dark.webp"
+              data-product-theme="dark"
+              alt="A Bases table view built from Markdown note properties inside a Lapis Notes workspace."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+
+        <article class="landing-band landing-band--reverse">
+          <div class="landing-band__copy">
+            <p class="landing-eyebrow">Plugin surface</p>
+            <h3>Plugins widen the workspace.</h3>
+            <p>
+              Desktop includes a core editing and navigation profile. Canvas,
+              Bases, Notebook, Slides, and PDF are separately owned plugins;
+              installation and host support vary. Check the plugin guides before
+              enabling optional features.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Community plugin settings"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Settings</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/community-banner.light.webp"
+              data-product-theme="light"
+              alt="Community plugin settings in a Lapis workspace."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/community-banner.dark.webp"
+              data-product-theme="dark"
+              alt="Community plugin settings in a Lapis workspace."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+
+        <article class="landing-band">
+          <div class="landing-band__copy">
+            <p class="landing-eyebrow">Notebook workflows</p>
+            <h3>Keep executable analysis beside the note.</h3>
+            <p>
+              Mix prose, SQL, JavaScript cells, and interactive inputs in
+              `.notebook.md` files so analysis stays beside the notes it
+              supports.
+            </p>
+          </div>
+          <figure
+            class="landing-shot landing-shot--feature"
+            aria-label="Notebook gallery"
+          >
+            <div class="landing-window">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>Notebook</strong>
+            </div>
+            <img
+              class="landing-shot__image"
+              src="/media/notebook-workspace.light.webp"
+              data-product-theme="light"
+              alt="A notebook with executed cells inside a Lapis Notes workspace."
+              loading="lazy"
+            /><img
+              class="landing-shot__image"
+              src="/media/notebook-workspace.dark.webp"
+              data-product-theme="dark"
+              alt="A notebook with executed cells inside a Lapis Notes workspace."
+              loading="lazy"
+            />
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="landing-section landing-platforms">
+      <div>
+        <p class="landing-eyebrow">Runs where your vault lives</p>
+        <h2>Start with the Desktop preview.</h2>
+      </div>
+      <div class="landing-platforms__body">
+        <ul>
+          <li>
+            <strong>Web app</strong> uses browser-managed storage for a browser vault;
+            capabilities and availability differ from Desktop.
+          </li>
+          <li>
+            <strong>Desktop</strong> opens filesystem folders as vaults through the
+            native Tauri shell. Preview archives are available for macOS Apple Silicon
+            and Linux ARM64/x64; review the release's platform limitations.
+          </li>
+          <li>
+            <strong>Local-first</strong> means your notes remain ordinary vault files
+            that can be backed up, synced, or inspected with other tools.
+          </li>
+        </ul>
+        <div class="landing-closing-card">
+          <h3>Start with a vault, then grow into views and plugins.</h3>
+          <p>
+            The help docs cover vault setup, editing, plugins, and the desktop
+            and web workflows needed to make the app feel at home.
+          </p>
+          <div class="landing-inline-actions">
+            <a class="site-button site-button--primary" href="/help/"
+              >Browse help</a
+            >
+            <a class="site-button site-button--secondary" href="/developers/"
+              >Read developer docs</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</SiteLayout>

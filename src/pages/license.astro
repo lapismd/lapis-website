@@ -1,0 +1,130 @@
+---
+import SiteLayout from "../components/SiteLayout.astro";
+
+const lastUpdated = "November 1, 2026";
+---
+
+<SiteLayout title="License - Lapis Notes">
+  <main class="legal-main">
+    <header class="legal-hero">
+      <p class="landing-eyebrow">License</p>
+      <h1>License overview</h1>
+      <p class="legal-dek">
+        Lapis Notes uses different licenses for the app, plugin API, examples,
+        documentation, and brand assets.
+      </p>
+      <p class="legal-meta">Last updated {lastUpdated}</p>
+    </header>
+
+    <div class="legal-content">
+      <section class="legal-section" aria-labelledby="summary">
+        <h2 id="summary">Summary</h2>
+        <ul class="legal-license-list">
+          <li>
+            <strong>Desktop and shared Notes framework: Apache-2.0</strong>
+            <span>
+              The current Desktop, Notes framework, and lapis-plugins
+              repositories declare Apache-2.0. Separately versioned plugins,
+              including Notebook, Tasks, Docs, and Terminal, declare their own
+              licenses, including AGPL-3.0-or-later.
+            </span>
+          </li>
+          <li>
+            <strong>Plugin SDK/API: Apache-2.0</strong>
+            <span>
+              The public Lapis API package is licensed permissively so plugin
+              authors can build compatible plugins under their own license
+              choices.
+            </span>
+          </li>
+          <li>
+            <strong>Example plugins: MIT or Apache-2.0</strong>
+            <span>
+              Example and compatibility-oriented plugins may use permissive
+              licenses when their package metadata says so.
+            </span>
+          </li>
+          <li>
+            <strong>Docs and site content: CC BY 4.0</strong>
+            <span>
+              Public documentation and website content can be reused with
+              attribution unless a page or source note says otherwise.
+            </span>
+          </li>
+          <li>
+            <strong>Name and logo: trademark rights reserved</strong>
+            <span>
+              The Lapis Notes name, logos, and related marks are not granted by
+              the source-code or documentation licenses.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="legal-section" aria-labelledby="packages">
+        <h2 id="packages">Package Metadata</h2>
+        <p>
+          Each workspace package declares its license in package metadata. If a
+          package, source file, vendored file, or third-party dependency carries
+          a more specific notice, that notice controls that material.
+        </p>
+        <p>
+          The repository-level license file summarizes the package groups and
+          points to the canonical license text for each license family.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="third-party">
+        <h2 id="third-party">Third-Party And Vendored Code</h2>
+        <p>
+          Lapis depends on open-source packages and includes some vendored code.
+          Those dependencies and vendored files keep their own copyright
+          notices, license terms, and attribution requirements.
+        </p>
+        <p>
+          Public documentation adapted from upstream projects is attributed on
+          the
+          <a href="/help/help-and-support/attributions/"
+            >documentation attributions</a
+          >
+          page.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="plugins">
+        <h2 id="plugins">Plugin Authors</h2>
+        <p>
+          The Apache-2.0 plugin API license is intended to keep plugin
+          development practical. Plugins that merely use the documented API do
+          not have to use the same license as separately licensed plugins
+          because of that API package alone. Plugin authors remain responsible
+          for the licenses of their own code and dependencies.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="marks">
+        <h2 id="marks">Name And Logo</h2>
+        <p>
+          Open-source and documentation licenses do not grant permission to use
+          Lapis Notes names, logos, icons, domain names, or confusingly similar
+          marks as your own product identity. Forks and redistributed builds
+          should avoid implying endorsement by the Lapis Notes project.
+        </p>
+      </section>
+
+      <section class="legal-section" aria-labelledby="related">
+        <h2 id="related">Related Pages</h2>
+        <div class="legal-links-row">
+          <a class="site-button site-button--secondary" href="/terms/">Terms</a>
+          <a class="site-button site-button--secondary" href="/privacy/"
+            >Privacy</a
+          >
+          <a
+            class="site-button site-button--secondary"
+            href="/help/help-and-support/attributions/">Attributions</a
+          >
+        </div>
+      </section>
+    </div>
+  </main>
+</SiteLayout>

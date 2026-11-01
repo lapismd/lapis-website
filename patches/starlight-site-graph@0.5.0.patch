@@ -1,0 +1,147 @@
+diff --git a/components/graph/Graph.astro b/components/graph/Graph.astro
+index e0f76f51884456e231819598d5f9e6799e5b57a9..ab024bbd559312a0ab9c3f5226c10134d099c588 100644
+--- a/components/graph/Graph.astro
++++ b/components/graph/Graph.astro
+@@ -1,5 +1,6 @@
+ ---
+ import '../../styles/common.css';
++import micromatch from 'micromatch';
+ import type { GraphConfig, Sitemap } from '../../config';
+ 
+ interface Props {
+@@ -12,12 +13,17 @@ interface Props {
+ 
+ 
+ const { config, sitemap, slug, debug = false, trailingSlashes = true } = Astro.props;
++const nodeInclusionMatchers = (config.nodeInclusionRules ?? []).map((pattern) => {
++  const include = !pattern.startsWith('!');
++  const expression = micromatch.makeRe(include ? pattern : pattern.slice(1));
++  return { source: expression.source, flags: expression.flags, include };
++});
+ ---
+ 
+ <div class="slsg-graph-component slsg-graph-skeleton">
+ 	<div class="slsg-graph-container"/>
+ </div>
+-<graph-component data-config={JSON.stringify(config)} data-sitemap={JSON.stringify(sitemap)} data-slug={slug} data-debug={debug} data-trailing-slashes={trailingSlashes}></graph-component>
++<graph-component data-node-inclusion-matchers={JSON.stringify(nodeInclusionMatchers)} data-config={JSON.stringify(config)} data-sitemap={JSON.stringify(sitemap)} data-slug={slug} data-debug={debug} data-trailing-slashes={trailingSlashes}></graph-component>
+ 
+ <script>
+ 	import { GraphComponent } from './graph-component';
+diff --git a/components/graph/action-element.ts b/components/graph/action-element.ts
+index 69571482779145130b61a4daff3101d16b4e9394..ebab47d2457c44fe8cb93208e9091b1ca2dfed53 100644
+--- a/components/graph/action-element.ts
++++ b/components/graph/action-element.ts
+@@ -18,6 +18,14 @@ export function renderActionContainer(context: GraphComponent) {
+ 	for (const action of context.config.actions) {
+ 		const actionElement = document.createElement('button');
+ 		actionElement.classList.add('slsg-graph-action-button');
++        actionElement.type = 'button';
++        const label = action === 'fullscreen'
++            ? (context.isFullscreen ? 'Exit full screen' : 'Enter full screen')
++            : action === 'depth' ? 'Change graph depth'
++            : action === 'reset-zoom' ? 'Reset graph zoom'
++            : action.replaceAll('-', ' ');
++        actionElement.setAttribute('aria-label', label);
++        actionElement.title = label;
+ 		context.actionContainer.appendChild(actionElement);
+ 
+ 		if (action === 'fullscreen') {
+diff --git a/components/graph/graph-component.ts b/components/graph/graph-component.ts
+index 7fe28751cceea84825bd18adfb6acbbacbcf3cb5..a9a181f3de3406bb27276a035b49c069b9f4db06 100644
+--- a/components/graph/graph-component.ts
++++ b/components/graph/graph-component.ts
+@@ -281,6 +281,7 @@ export class GraphComponent extends HTMLElement {
+ 			if (e.key === 'Escape' || e.key === 'f') this.disableFullscreen();
+ 		};
+ 		this.toggleFullscreen();
++		this.graphContainer.focus();
+ 	}
+ 
+ 	disableFullscreen() {
+diff --git a/components/graph/path-patterns.js b/components/graph/path-patterns.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..d9e077956fe2b61539bcd8a2759c2290d9da5704
+--- /dev/null
++++ b/components/graph/path-patterns.js
+@@ -0,0 +1,7 @@
++/** Match server-compiled globs without Node-only modules in the browser. */
++export function firstMatchingPattern(text, patterns, defaultMatch) {
++  for (const pattern of patterns) {
++    if (new RegExp(pattern.source, pattern.flags).test(text)) return pattern.include;
++  }
++  return defaultMatch;
++}
+diff --git a/components/graph/preprocess-sitemap.ts b/components/graph/preprocess-sitemap.ts
+index 454814d14e24c05362c879fcc2e451df7572012c..d7ba8e0c3a2d3fcf1d242ca5105fc48970efc5b9 100644
+--- a/components/graph/preprocess-sitemap.ts
++++ b/components/graph/preprocess-sitemap.ts
+@@ -1,4 +1,4 @@
+-import micromatch from 'micromatch';
++import { firstMatchingPattern } from './path-patterns.js';
+ 
+ import type { LinkData, NodeData } from './types';
+ import type { Sitemap } from '../../config';
+@@ -14,20 +14,6 @@ export type GraphData = {
+ 	links: LinkData[];
+ };
+ 
+-function firstMatchingPattern(
+-	text: string,
+-	patterns: string | string[],
+-	defaultMatch?: boolean,
+-): boolean | undefined {
+-	const patternList = typeof patterns === 'string' ? [patterns] : patterns;
+-	for (const pattern of patternList) {
+-		if (micromatch.isMatch(text, pattern.startsWith('!') ? pattern.slice(1) : pattern)) {
+-			return !pattern.startsWith('!');
+-		}
+-	}
+-	return defaultMatch;
+-}
+-
+ // TODO: Preprocess sitemap at build time and bundle together (client load performance vs. built page size)
+ export function processSitemapData(context: GraphComponent, siteData: Sitemap): GraphData {
+ 	const visitedPages: Set<string> = getVisitedEndpoints();
+@@ -37,7 +23,7 @@ export function processSitemapData(context: GraphComponent, siteData: Sitemap):
+ 	let corrected_data = Object.entries(siteData).map(([k, v]) => [simplifySlug(k), v] as const);
+ 	if (context.config.nodeInclusionRules && context.config.nodeInclusionRules.length > 1 || context.config.nodeInclusionRules[0] !== "**/*") {
+ 		corrected_data = corrected_data.filter(([k, _]) => {
+-			return firstMatchingPattern(k, context.config.nodeInclusionRules, true)
++			return firstMatchingPattern(k, JSON.parse(context.dataset.nodeInclusionMatchers ?? '[]'), true)
+ 		});
+ 	}
+ 
+diff --git a/config/index.ts b/config/index.ts
+index 8a38bbfd4aaf8e635b654de4c3719dad159a8ece..8ea4a1d5fb968d60ae91561631d63812720e987f 100644
+--- a/config/index.ts
++++ b/config/index.ts
+@@ -2,7 +2,7 @@ import { AstroError } from 'astro/errors';
+ import { type StarlightSiteGraphConfig, starlightSiteGraphConfig, starlightSiteGraphConfigSchema } from './base';
+ 
+ function isObject(item: any): boolean {
+-	return (item && typeof item === 'object' && !Array.isArray(item));
++	return (item && typeof item === 'object' && !Array.isArray(item) && !(item instanceof Map));
+ }
+ 
+ /**
+@@ -41,6 +41,19 @@ export function validateConfig(userConfig: unknown) {
+ 		);
+ 	}
+ 
++	const styleRules = config.data.sitemapConfig?.styleRules;
++	if (styleRules && !(styleRules instanceof Map)) {
++		config.data.sitemapConfig.styleRules = new Map(
++			Object.entries(styleRules).map(([rules, style]) => [
++				rules
++					.split(',')
++					.map((rule) => rule.trim())
++					.filter(Boolean),
++				style,
++			]),
++		);
++	}
++
+ 	// TODO: Investigate how to apply Required<> to inferred type of schema, so comments still stay
+ 	// Merge with default settings
+ 	return deepMerge(starlightSiteGraphConfig, config.data) as typeof starlightSiteGraphConfig;

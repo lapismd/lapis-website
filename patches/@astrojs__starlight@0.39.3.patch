@@ -1,0 +1,33 @@
+diff --git a/components/MobileMenuToggle.astro b/components/MobileMenuToggle.astro
+index 0f078d36a50f5ed4948380510abafed8c635edc5..fc039b3aae07a1b1c56189e66c24fbd70a961040 100644
+--- a/components/MobileMenuToggle.astro
++++ b/components/MobileMenuToggle.astro
+@@ -32,6 +32,7 @@ import Icon from '../user-components/Icon.astro';
+ 
+ 		setExpanded(expanded: boolean) {
+ 			this.setAttribute('aria-expanded', String(expanded));
++			this.btn.setAttribute('aria-expanded', String(expanded));
+ 			document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
+ 		}
+ 
+diff --git a/components/Search.astro b/components/Search.astro
+index d8c80d826995d6c8ce598aa618ddf7ea575ecadc..188ce51101fc5ce15c5e47db408c7af14570e1c2 100644
+--- a/components/Search.astro
++++ b/components/Search.astro
+@@ -24,7 +24,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
+ 	>
+ 		<Icon name="magnifier" />
+ 		<span class="sl-hidden md:sl-block" aria-hidden="true">{Astro.locals.t('search.label')}</span>
+-		<kbd class="sl-hidden md:sl-flex" style="display: none;">
++		<kbd class="sl-hidden md:sl-flex" style="display: none;" aria-hidden="true">
+ 			<kbd>{Astro.locals.t('search.ctrlKey')}</kbd><kbd>K</kbd>
+ 		</kbd>
+ 	</button>
+@@ -69,6 +69,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
+ 			platformKey.textContent = '⌘';
+ 			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+ 		}
++		openBtn.setAttribute('aria-label', openBtn.textContent?.replace(/\s+/g, ' ').trim() || openBtn.getAttribute('aria-label') || '');
+ 		shortcut.style.display = '';
+ 	})();
+ </script>

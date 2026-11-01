@@ -1,0 +1,72 @@
+---
+import "../styles/lapis-starlight.css";
+import logo from "../assets/logo.svg";
+import LapisThemeBootstrap from "./LapisThemeBootstrap.astro";
+import LapisThemeSelect from "./LapisThemeSelect.astro";
+import SiteFooter from "./SiteFooter.astro";
+import { isSiteNavActive } from "../lib/site-nav";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Lapis Notes" } = Astro.props;
+const appUrl = "/help/getting-started/download-and-install/";
+const pathname = Astro.url.pathname;
+
+const primaryNav = [
+  { href: "/help/", label: "Help" },
+  { href: "/developers/", label: "Developers" },
+  { href: "/license/", label: "License" },
+  { href: "/terms/", label: "Terms" },
+  { href: "/privacy/", label: "Privacy" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <LapisThemeBootstrap />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lapis Notes — a local-first notes app with Markdown editing, graph, canvas, bases, tasks, and notebooks."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-header__brand" href="/">
+          <img src={logo.src} width={32} height={32} alt="" />
+          <span>Lapis Notes</span>
+        </a>
+        <nav class="site-header__nav" aria-label="Primary">
+          {
+            primaryNav.map((link) => (
+              <a
+                href={link.href}
+                class="site-nav-link"
+                aria-current={
+                  isSiteNavActive(link.href, pathname) ? "page" : undefined
+                }
+              >
+                {link.label}
+              </a>
+            ))
+          }
+          <LapisThemeSelect />
+          <a href={appUrl} class="site-button site-button--primary"
+            >Desktop preview</a
+          >
+        </nav>
+      </header>
+      <div class="site-main">
+        <slot />
+      </div>
+      <SiteFooter />
+    </div>
+  </body>
+</html>

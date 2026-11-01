@@ -1,0 +1,55 @@
+<script is:inline>
+  window.StarlightThemeProvider = (() => {
+    function isDocsPath(pathname) {
+      return (
+        pathname.indexOf("/help/") === 0 ||
+        pathname.indexOf("/developers/") === 0
+      );
+    }
+
+    function getPageDefaultTheme() {
+      return isDocsPath(document.location.pathname) ? "light" : "dark";
+    }
+
+    function resolveTheme(preference) {
+      if (preference === "light" || preference === "dark") return preference;
+      return getPageDefaultTheme();
+    }
+
+    const stored =
+      typeof localStorage !== "undefined" &&
+      localStorage.getItem("starlight-theme");
+    const preference =
+      stored === "light" || stored === "dark" ? stored : "auto";
+    document.documentElement.dataset.theme = resolveTheme(preference);
+
+    return {
+      updatePickers(theme) {
+        const stored =
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("starlight-theme");
+        const pickerValue =
+          theme === "light" || theme === "dark"
+            ? theme
+            : stored === "light" || stored === "dark"
+              ? stored
+              : "auto";
+        document
+          .querySelectorAll("starlight-theme-select")
+          .forEach((picker) => {
+            const select = picker.querySelector("select");
+            if (select) select.value = pickerValue;
+            const tmpl = document.querySelector("#theme-icons");
+            const newIcon =
+              tmpl && tmpl.content.querySelector("." + pickerValue);
+            if (newIcon) {
+              const oldIcon = picker.querySelector("svg.label-icon");
+              if (oldIcon) {
+                oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+              }
+            }
+          });
+      },
+    };
+  })();
+</script>

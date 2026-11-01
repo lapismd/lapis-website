@@ -1,0 +1,61 @@
+<starlight-theme-select class="site-theme-select">
+  <label>
+    <span class="sr-only">Select theme</span>
+    <select value="auto" autocomplete="off" aria-label="Select theme">
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+      <option value="auto" selected>Default</option>
+    </select>
+  </label>
+</starlight-theme-select>
+
+<script is:inline>
+  StarlightThemeProvider.updatePickers();
+</script>
+
+<script>
+  import { initThemeSelect } from "../lib/lapis-theme";
+
+  initThemeSelect();
+</script>
+
+<style>
+  .site-theme-select label {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-theme-select select {
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: transparent;
+    color: var(--lapis-ink-muted);
+    font-size: 14px;
+    line-height: 1.43;
+    cursor: pointer;
+    appearance: none;
+    transition: background-color 160ms ease;
+  }
+
+  .site-theme-select select:hover {
+    background: var(--lapis-surface-2);
+  }
+
+  .site-theme-select option {
+    background: var(--lapis-canvas);
+    color: var(--lapis-ink);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

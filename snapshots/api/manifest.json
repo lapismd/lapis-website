@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "kind": "lapis-api-docs",
+  "packageName": "@lapis-notes/api",
+  "version": "0.2.4",
+  "repository": "https://github.com/lapismd/lapis-notes",
+  "revision": "60c709ad0425aa5dcd5920436ed65f1504247ee3",
+  "files": [
+    {
+      "path": "classes/AbstractInputSuggest.md",
+      "sha256": "35ab2f2638c7a022a690f7ce75e039ab867e8b525e0407cd7d47b41ab708e523"
+    },
+    {
+      "path": "classes/App.md",
+      "sha256": "bd8d970a691b33c03ea3e3fe46ae4045696f01615affecbc909136b9f1e5bb74"
+    },
+    {
+      "path": "classes/AppSettings.md",
+      "sha256": "270644878d1309d55529f6329f923ca4cfa79ff771631143b8bc8f56b9b73d56"
+    },
+    {
+      "path": "classes/AppUrlService.md",
+      "sha256": "511f38a02273d50ad652e4ddc7cfb338617a259e4864fbfb0ed4a0d10473d04a"
+    },
+    {
+      "path": "classes/ButtonComponent.md",
+      "sha256": "e77ed68e48b49b01c715396f78aa92248d06b11f6f7d7227266374150fd9631a"
+    },
+    {
+      "path": "classes/CommandManager.md",
+      "sha256": "e5a69acddb73fa493855faa4830e13b088e5d18c3306b4a39c01088ed5c927f7"
+    },
+    {
+      "path": "classes/Component.md",
+      "sha256": "9468e04d29dda398f3afe59fbb5ac30b5730ca1805d8bb97f21d65a5222853e6"
+    },
+    {
+      "path": "classes/DeclarativePluginSettingTab.md",
+      "sha256": "46597867eb04a60df2c7a25d79fdfc4adf6e1fd5d738afd11ab14c3f849bbd43"
+    },
+    {
+      "path": "classes/DropdownComponent.md",
+      "sha256": "24f90264e1e0f5a45733f0f9779c34caf8b4ceafb1175dd1e8f4c7556a1e6928"
+    },
+    {
+      "path": "classes/Editor.md",
+      "sha256": "61bfe202a2b7bb50767ef05c83202bd465564a6dba8609a18d7416224c9fab3b"
+    },
+    {
+      "path": "classes/EditorSuggest.md",
+      "sha256": "4f4114ad97571bc654dbbbdea07c2167e2472ba898bed319bba02e39b1b2ac9a"
+    },
+    {
+      "path": "classes/EventDispatcher.md",
+      "sha256": "c1485eaf655d86a7f9d92b661ca61a0a87203e6247c6bb8f7009908964303b5f"
+    },
+    {
+      "path": "classes/FileManager.md",
+      "sha256": "d9e8caf69d6a975fe2c0cbcd164ef369e27d18eeb45b9331cf078667db95d31a"
+    },
+    {
+      "path": "classes/FileView.md",
+      "sha256": "46f048d5dfa68f940e35472561e9a8da9d4b1e82a8ded942487318ede74d2a5a"
+    },
+    {
+      "path": "classes/FuzzySuggestModal.md",
+      "sha256": "693becd779345ba7d4cad83cd2eef187477c5a3fcca556448ebbab6d522bbd54"
+    },
+    {
+      "path": "classes/ItemView.md",
+      "sha256": "5cd14cc023bb0e19f23d229d0ade3e0b504b1f52f075d5cf38f2b15a73322760"
+    },
+    {
+      "path": "classes/Keymap.md",
+      "sha256": "2373580d0a9a0cf47fa0393a524d90870e4a1afda146024cb9090e3e5775de2b"
+    },
+    {
+      "path": "classes/LanguageServiceManager.md",
+      "sha256": "905af9c6b8afa69759f8447271751a345fea261b71a20d63e3695542e221728f"
+    },
+    {
+      "path": "classes/MarkdownRenderChild.md",
+      "sha256": "dcd818f8a40b0a5cd7ff6862910167dead4a4dd750fe6daa16e94077be6a29e3"
+    },
+    {
+      "path": "classes/Menu.md",
+      "sha256": "3794a2c24cd1b84164db118dba0e85cfafea8a517aad258ed10256b228a194ab"
+    },
+    {
+      "path": "classes/MenuItem.md",
+      "sha256": "85b246c6016325ff2eb14a1ddade88a5b0c6c96ebee642d01b2a118b50758727"
+    },
+    {
+      "path": "classes/MenuSeparator.md",
+      "sha256": "c88811114ce6b1d860832c410b457420d22cd3845314f2056beabc79e1f6b502"
+    },
+    {
+      "path": "classes/MetadataCache.md",
+      "sha256": "71a5f1e0650a3938512801f94868e9691bd5e02bb585a0515f8d737f6619dcd2"
+    },
+    {
+      "path": "classes/Modal.md",
+      "sha256": "d9b02be9005bca598cacee1ad04b68eab18943013f4c3f7280df92cadede9a97"
+    },
+    {
+      "path": "classes/Notice.md",
+      "sha256": "a403288965fa03810cdf69f3b8818e837ef7b304bfd35028758ec9195ee70b15"
+    },
+    {
+      "path": "classes/NotificationManager.md",
+      "sha256": "34d96a5b485c8cc18a05554f549a552df9ede23dd676b80817165f93ba16bd5c"
+    },
+    {
+      "path": "classes/NotificationProgressHandle.md",
+      "sha256": "bcd44be9ddec0eb493ee8fc44856a53d13103654f5cc4aba4a2a72960bc53a54"
+    },
+    {
+      "path": "classes/Plugin.md",
+      "sha256": "b6858fd98fd083705a759d362db3f7040c6e5a7d2599af4936cf7116de90f546"
+    },
+    {
+      "path": "classes/PluginManager.md",
+      "sha256": "fea215e6cfe435b37bc5898d0fa140eb2a7fa36f8597293ce6e2ba2f8631b4ec"
+    },
+    {
+      "path": "classes/PluginSettingTab.md",
+      "sha256": "7418adad38111aa15c9e463d883b89550e620363c614639f55f3acfb9269a4c5"
+    },
+    {
+      "path": "classes/PopoverSuggest.md",
+      "sha256": "1c1c7a57eefdcd73d64fc7c8e8059f1e0fc0e9294039bc058b823e1a68e3bdab"
+    },
+    {
+      "path": "classes/ProgressBarComponent.md",
+      "sha256": "46f433b2c9ee33369a6093e2792a5298931f992143ab163de407658a4b72b27b"
+    },
+    {
+      "path": "classes/RenderContext.md",
+      "sha256": "b3367aaf537c28247582b0eb73a3318a98acc17f6f50d671403a3d04401650cd"
+    },
+    {
+      "path": "classes/Scope.md",
+      "sha256": "6617a8fbdc1997e4eae4ed9aa4ce1ad8d814fe7d31eb026a585b626809022c2c"
+    },
+    {
+      "path": "classes/SearchComponent.md",
+      "sha256": "a3bc3b84159b082322b6244686dfb5c52d97c2f16dbb788dfaa98f621b91e987"
+    },
+    {
+      "path": "classes/SecretStorage.md",
+      "sha256": "d2f6d68d2a3cb4759acb5d4236c79ee7e785b7cd1184fd414ba97353895de428"
+    },
+    {
+      "path": "classes/Setting.md",
+      "sha256": "2e5b2d2f11e495dcb3b1603e158e6a7d533cccfb434360b62d65705b3d975797"
+    },
+    {
+      "path": "classes/SliderComponent.md",
+      "sha256": "22cfb75695f0933fe104d2dda007afac841ff3fabeccecae3d971cd0a82a5b47"
+    },
+    {
+      "path": "classes/SuggestModal.md",
+      "sha256": "140e89f89b0b8bbbc532c6cf629eb77a3c6c95edf08d30fad3e516d7062977fe"
+    },
+    {
+      "path": "classes/TAbstractFile.md",
+      "sha256": "86ebf75e625f716d567f7e16b3ca831da29c47ac02204d20f49998a974229e16"
+    },
+    {
+      "path": "classes/TFile.md",
+      "sha256": "2e8bc85deaca7ab1f3f88a3d4aa766cf3851652081196c62580133e3a660e282"
+    },
+    {
+      "path": "classes/TFolder.md",
+      "sha256": "95b3628a77a5a507c433c09813510a7d6d4958eb31486ffb1b9c01c77f95d1a2"
+    },
+    {
+      "path": "classes/TextAreaComponent.md",
+      "sha256": "757c27750521c4c15b355eb568bfc91db6a91c9c0d210b1a609da49e9fd4824c"
+    },
+    {
+      "path": "classes/TextComponent.md",
+      "sha256": "74da44dbf8ae122dff5a9ee920c99c0ae99a48730f265df2849f3f83a32952a0"
+    },
+    {
+      "path": "classes/TextFileView.md",
+      "sha256": "1b77f82dd01601c3b7814533560e1363502485a99b40bd4b19382d5777e6b7c6"
+    },
+    {
+      "path": "classes/ToggleComponent.md",
+      "sha256": "1776feace3373dd79190773d09b1637fba7b5c160724a2916a4eae51db03a239"
+    },
+    {
+      "path": "classes/Vault.md",
+      "sha256": "997d71afea60449075b66cf0e105a016907b253624223c9c8c7967731cd90d22"
+    },
+    {
+      "path": "classes/View.md",
+      "sha256": "df7565e7bdf24920c392f832123bd0f306d6a72f40d2604e23e0b02310b41242"
+    },
+    {
+      "path": "classes/Workspace.md",
+      "sha256": "e562b40d7eb00ef4691383dde3390a934a5c258ce1c1115c63482a5b53d45104"
+    },
+    {
+      "path": "classes/WorkspaceLeaf.md",
+      "sha256": "08c1adde1f487e41886c8a967e26912aa1b4d843335ec95b8ddfb5960c635bc8"
+    },
+    {
+      "path": "classes/WorkspaceSidebarGroup.md",
+      "sha256": "fca43aed06041ee762277fd56d6205313376e02a090942bcb0837d8e83ec3554"
+    },
+    {
+      "path": "classes/WorkspaceSidedock.md",
+      "sha256": "2ed162f8c93874452e97cb6d287859a99483d1f94ef7fa3bcf9fc285336c83ae"
+    },
+    {
+      "path": "classes/WorkspaceSplit.md",
+      "sha256": "7f41e87a23072388cbea0f02ac4cbe603a357a3cad2d6c51b8d76ac71e2c190a"
+    },
+    {
+      "path": "classes/WorkspaceTabs.md",
+      "sha256": "888fb183a25aad0677c472cceceb358c47a165e9958b10a767acd4350435caee"
+    },
+    {
+      "path": "functions/addIcon.md",
+      "sha256": "535ba44a799dd017f238b494790ea2f614f1a3db4edb710f4781fe04bd954196"
+    },
+    {
+      "path": "functions/createDefaultAppSafeModeState.md",
+      "sha256": "67557d920bcd2703ea2e85b767c39618be36b2c3267db9bd1f985160fe56ddb3"
+    },
+    {
+      "path": "functions/getApplicationCompatibility.md",
+      "sha256": "c3b9f90f7080c12a3b21fbe41f4fa20081ef32102b08145b9a3df3a28fcb168c"
+    },
+    {
+      "path": "functions/installApplicationCompatibility.md",
+      "sha256": "524d5fd31bd901fe509a428f1ffcd69b9db6fb331efea02cd6028419f9f7a5e8"
+    },
+    {
+      "path": "functions/normalizePath.md",
+      "sha256": "c3f1f9e759eb75e086c600b957ff279a8c27190a3451c6095460dad6b70e89a2"
+    },
+    {
+      "path": "functions/provideApplicationState.md",
+      "sha256": "c392bc153d7708cc09e234f21b418d54e2dda96fb54214597c19d182531deb64"
+    },
+    {
+      "path": "functions/resolveApplication.md",
+      "sha256": "aaf89bc0e7191bd9d73505d46386bfe64db0951625be5207772b41f5df6d222c"
+    },
+    {
+      "path": "functions/resolvePluginDataPath.md",
+      "sha256": "f685fa90f94eae6cf38ff3bcfad2c32fb0cb86e36e6543083943304c04771237"
+    },
+    {
+      "path": "functions/useApplicationState.md",
+      "sha256": "008aa7a24f3f3b54f7f4ca1df3f842efc8deb070c00432dd2096a5c2b81462d8"
+    },
+    {
+      "path": "index.md",
+      "sha256": "e6c0f13097e3a2b836c7a0ab70e2f86ff671192044ff12ca0d64599589138b2a"
+    },
+    {
+      "path": "interfaces/AppSafeModeFailure.md",
+      "sha256": "05d3a22f18d63984c1154f44f6a75e41950352d7c6f9311533abcad56530191e"
+    },
+    {
+      "path": "interfaces/AppSafeModeState.md",
+      "sha256": "c90de46141ee436c5e05892ee8b5ffab2cedd1598100d86e0788cf0512798dee"
+    },
+    {
+      "path": "interfaces/CachedMetadata.md",
+      "sha256": "cf2cf81b46a31433693775a1d4e29c2493342d88e81f3a875a917b685760fe0d"
+    },
+    {
+      "path": "interfaces/Command.md",
+      "sha256": "27b24cc98b37e18f118dfba94c0c45d47ddee2a1b3417c6f3c0f6eb9e207881a"
+    },
+    {
+      "path": "interfaces/DataAdapter.md",
+      "sha256": "fbc15bb25a4bcd646d0f15e913ade365737633e53283cf0c4799eab8147f5856"
+    },
+    {
+      "path": "interfaces/EditorChange.md",
+      "sha256": "1366be509cdf900349349a2dc51d3e2d6b88740bcdbba3285200484e2587e943"
+    },
+    {
+      "path": "interfaces/EditorRange.md",
+      "sha256": "28055642ed2863cf78dff21621d549b92c1c257bb1421f4b0f6fdd53fe30aae3"
+    },
+    {
+      "path": "interfaces/EditorRangeOrCaret.md",
+      "sha256": "aba839559754c38ff222d4565c2dd014ce03512637bdde373cfba50f16b2982a"
+    },
+    {
+      "path": "interfaces/EditorScrollInfo.md",
+      "sha256": "e84ee95f2ea34d59a3df58d804d19454355a24d28773308531460196189cdb9c"
+    },
+    {
+      "path": "interfaces/EditorSelection.md",
+      "sha256": "58747c8a1ec90c4702a00e2e4426bb3a646b2472ae32063d436138d45dd628ed"
+    },
+    {
+      "path": "interfaces/EditorSelectionOrCaret.md",
+      "sha256": "ad498d4d2add4c9be37ade526e65f3420475c97ec2a1cc8af7b96de40c538d56"
+    },
+    {
+      "path": "interfaces/EditorSuggestContext.md",
+      "sha256": "779c93010818cb6e30ec5ca5661410e78e1f9019fdcdc967739cd804aff8b1b2"
+    },
+    {
+      "path": "interfaces/EditorSuggestTriggerInfo.md",
+      "sha256": "63d80ec1dbde77e8578491f265d8dad3894ce7b5c80814e38f2126655d1fe1e7"
+    },
+    {
+      "path": "interfaces/EditorTransaction.md",
+      "sha256": "3aef8d7248d81299e5b0d0e98807d0b03ddc175f8f5eb41823bcac63bb4ed7ea"
+    },
+    {
+      "path": "interfaces/Hotkey.md",
+      "sha256": "1c6f9241180b12a6b0c0ffe291c9a6268fa260419b34e533713e1c33bbd40a9d"
+    },
+    {
+      "path": "interfaces/HotkeyAssignment.md",
+      "sha256": "dd2267424f25b1f19a30328e6ca4fe3315774973ac68ad5a13a19106ca08d9f0"
+    },
+    {
+      "path": "interfaces/HotkeyConflict.md",
+      "sha256": "62febc0af8662ee36705e3def7724e25a121dbdeb128cc16fca9358462c64f00"
+    },
+    {
+      "path": "interfaces/KeymapContext.md",
+      "sha256": "a8a9a11586e0f5dc3a71d0e5baee15547e8bbedc2235079955e9e382c00bee95"
+    },
+    {
+      "path": "interfaces/KeymapEventHandler.md",
+      "sha256": "16c475b84a5c886d28307bcab118de66f19b5b1bd10085cfaf5bf6aba9b082c1"
+    },
+    {
+      "path": "interfaces/KeymapInfo.md",
+      "sha256": "cbf232d7ad6feba6f8adf8df32d72321a9ee0c773137b4b81526518b014389f8"
+    },
+    {
+      "path": "interfaces/LanguageServiceCompletionItem.md",
+      "sha256": "48ad18dfd47ce95dc3b8db2b31cc08aa8e636463c5e20e819c9e68c51b5d8a60"
+    },
+    {
+      "path": "interfaces/LanguageServiceDiagnostic.md",
+      "sha256": "1ee65da693f2a0eecb4b4d08eede04e1c3222e99e1d4cd21c3a785bf710bf9bd"
+    },
+    {
+      "path": "interfaces/LanguageServiceHover.md",
+      "sha256": "72476a789d6964ad3286fa889e4421c3ad513c4490b44235ddb8bea52f49d81b"
+    },
+    {
+      "path": "interfaces/LanguageServiceLocation.md",
+      "sha256": "0a9c3b79d81c76b115228df8e4337a3f44ce18cf92de003c7e388143a93a6f92"
+    },
+    {
+      "path": "interfaces/LanguageServiceProvider.md",
+      "sha256": "02d73b04ad103b3b104945dc03337bfd6d3aaff391b006b189a3e5c3e40d2ac0"
+    },
+    {
+      "path": "interfaces/LanguageServiceProviderCapabilities.md",
+      "sha256": "a12a963b86c39ce54b6baa718dab623d6f5a6dcd61d3478807b9253ba8d9410c"
+    },
+    {
+      "path": "interfaces/LanguageServiceProviderMetadata.md",
+      "sha256": "0853d81f7bc4a917df91ad3e48adfdd9f2f55c366409107017e9042ea4c01145"
+    },
+    {
+      "path": "interfaces/LapisExtensionContributions.md",
+      "sha256": "033904e3561f5bf2a168defe3f4755f331f4c9d0fcb437a5fa69cf18a613dd71"
+    },
+    {
+      "path": "interfaces/LapisExtensionManifest.md",
+      "sha256": "b31953f2ead14a0e924a36177a5124b8e59233b8ad5c81402e1207d7b7872fc9"
+    },
+    {
+      "path": "interfaces/MarkdownCodeMirrorExtensionContext.md",
+      "sha256": "cbddb817387672238b732f4d32f82c12dd9164067a18b5ae861a89c4648b6472"
+    },
+    {
+      "path": "interfaces/MarkdownExtensionContribution.md",
+      "sha256": "1048919036583319960fa4c0f207532eb8bcd8dc229ba773c513e159538aa767"
+    },
+    {
+      "path": "interfaces/MarkdownFileInfo.md",
+      "sha256": "8e35555f1ef29a7aff59b34f9bb6dcf5bb45b8e11732e173410ce0943e97e326"
+    },
+    {
+      "path": "interfaces/MarkdownFileSurfaceHandle.md",
+      "sha256": "a808cac10fa8b6baa1028a66999fc7dd9500c4663bca62193562d0713d0e9440"
+    },
+    {
+      "path": "interfaces/MarkdownFileSurfaceOptions.md",
+      "sha256": "c560788ef3b12f89b15576c456c96a226a1c6258f9e479fc429a1ea74383a196"
+    },
+    {
+      "path": "interfaces/MarkdownPostProcessor.md",
+      "sha256": "8dd02594fbceedd00623cfad36d1545f62dc51f9078fc045f0765f39a5b5106c"
+    },
+    {
+      "path": "interfaces/MarkdownPostProcessorContext.md",
+      "sha256": "ce255766366a98c573c97ec7f546e00af38d5f814438777ae7a66630a79540cb"
+    },
+    {
+      "path": "interfaces/MarkdownSurfaceContext.md",
+      "sha256": "0249b7433ce7e706aba922980be7e2bfb149d9f10cc68d89651253a5e5a8c0b3"
+    },
+    {
+      "path": "interfaces/NotificationProgressOptions.md",
+      "sha256": "82eece573068d28a3ee7dfccc9782ce1c732074300b5301d1dd16038a17ff885"
+    },
+    {
+      "path": "interfaces/NotificationProgressReport.md",
+      "sha256": "60b76a5074948f5f25174eae318128a217d7e3a6c3dec5461b3e16594a268331"
+    },
+    {
+      "path": "interfaces/NotificationProgressSnapshot.md",
+      "sha256": "92202fa1c875a94eb2c4d9cc5b2c19889b6dc0f83a6b0c8aa48a645f74f97009"
+    },
+    {
+      "path": "interfaces/NotificationProgressToken.md",
+      "sha256": "43ac22308b6f80231e57c94a91d8cb2c10a12477c1b3259c3f8bb83414749eb3"
+    },
+    {
+      "path": "interfaces/NotifyOptions.md",
+      "sha256": "8f994a91c987947d467d1be461dc95e1f5b0153c27e1f1038c3b58306b0a0817"
+    },
+    {
+      "path": "interfaces/OpenViewState.md",
+      "sha256": "28b1465fda7c9736bceb67d76c296f201995b0e215c296de6a574e0ec669d493"
+    },
+    {
+      "path": "interfaces/PluginManifest.md",
+      "sha256": "fc851298ec34dd1d6ce01dd6c31032c1ebf3303c5e95e68b015a4e3710c1786b"
+    },
+    {
+      "path": "interfaces/PluginRuntimeOptions.md",
+      "sha256": "30807ba1e20d568545c7260d6a1d6cf338e5d17e5c95ce9a151ce95e64e5927f"
+    },
+    {
+      "path": "interfaces/PluginSettingsRegistration.md",
+      "sha256": "9ec5e5ea4733b07b76373996344539232f68e1f6d06412c87e6be5ee2030bf70"
+    },
+    {
+      "path": "interfaces/VaultAdapter.md",
+      "sha256": "6def0133df140c711fadb6f93cba9333fc559cba6d7e8f733dd37bacde22ee6a"
+    },
+    {
+      "path": "interfaces/VaultAdapterCapabilities.md",
+      "sha256": "8cb75f2a1ecbb09df936f200874e2156b43b6165b541cd6f641fa99eb6ac1d62"
+    },
+    {
+      "path": "interfaces/VaultIdentityAdapter.md",
+      "sha256": "573679177b5a8d73c56b15ce943108f4a6a51816063c67707bf7b72bc94ebc2c"
+    },
+    {
+      "path": "interfaces/VaultProfile.md",
+      "sha256": "2ec92bf2a67cd6687f0e868ed61cce8e7ea56a229cd14b0c2a34a31055172978"
+    },
+    {
+      "path": "interfaces/VaultProfileDemoMetadata.md",
+      "sha256": "f8ee0c745c4701ec628f199a666a54a26d4a4c0ea742ba7f973620a696a7e11c"
+    },
+    {
+      "path": "interfaces/VaultSession.md",
+      "sha256": "53e27a304e3d6b34b7ee485e3e92583a819598f46d6acedcbc4b2fcb533028d1"
+    },
+    {
+      "path": "interfaces/ViewState.md",
+      "sha256": "f3d32ca32e4e887d15f89c953c9f90bfbb0ca17442c3fb45a7c10027c5e58cc4"
+    },
+    {
+      "path": "interfaces/ViewStateResult.md",
+      "sha256": "89ba99bd252aee8a4748957c0b439cee07a8c19cb493d50c29342a1c7e2444d4"
+    },
+    {
+      "path": "interfaces/WorkspaceHintTarget.md",
+      "sha256": "5341192efd2ac28a0ffeec6c66c2a78cc6af730aa157a844c48022194a2a3b4f"
+    },
+    {
+      "path": "type-aliases/AppStateProperties.md",
+      "sha256": "09d71f00379087ec3975e2908b7d70137603e07138f7b1b540a81381ebf1b55c"
+    },
+    {
+      "path": "type-aliases/EditorPosition.md",
+      "sha256": "d7f4288ded4f695adec8fdb30f53f55fa4a0597358e2244e116a484280d746a0"
+    },
+    {
+      "path": "type-aliases/LapisExtensionKind.md",
+      "sha256": "41bcba51e32b928cd2e27f8f6330f49466ebfccaf49182ca5568fc59525b6359"
+    },
+    {
+      "path": "type-aliases/LapisExtensionPermission.md",
+      "sha256": "3e11179ce410e09215683c32f94fe02ad58ab03ed615eaeaa189810159ba3684"
+    },
+    {
+      "path": "type-aliases/LapisExtensionRuntimeHost.md",
+      "sha256": "370ff5109800979521aaecf2b42c465972070a38f6c40c0e3694e474b7b9e15a"
+    },
+    {
+      "path": "type-aliases/LapisPluginClassification.md",
+      "sha256": "1efb32cbdd4037c43a7443c52a7ac8f369b7fbe14e43d3d7125459a8a51078d6"
+    },
+    {
+      "path": "type-aliases/MarkdownContributionMode.md",
+      "sha256": "9fb361f4aeae76839c4d0cf2db0870e92193e43a9cd36a3a2b6fd4d129e3934e"
+    },
+    {
+      "path": "type-aliases/MarkdownDirectiveRenderer.md",
+      "sha256": "1181461421fb0ec50400f49254e131999d5599f0b38d7fc29de0defb0f2a8996"
+    },
+    {
+      "path": "type-aliases/MarkdownFileSurfaceActivation.md",
+      "sha256": "a0ecba467c2a8d58e3165a726851c58c06e929db3c01d1ca31a500e8e8a09ef8"
+    },
+    {
+      "path": "type-aliases/MarkdownFileSurfaceProvider.md",
+      "sha256": "d56bfcc8e2d1e403304a9320588cbb3e8361246533165862d6ec803ec6d561be"
+    },
+    {
+      "path": "type-aliases/MarkdownViewMenuItemProvider.md",
+      "sha256": "8c70cfb5791c57eafec7b0f2703e828e5e3e7ed0e67f24aef58ff8e8a669c238"
+    },
+    {
+      "path": "type-aliases/PluginSettingsDefinition.md",
+      "sha256": "5547823dbedc6caa60d56162fa37a6c437186ce2040c5fd0495a6edead5445ca"
+    },
+    {
+      "path": "type-aliases/PluginSource.md",
+      "sha256": "f7da8481e897c9e1b811e0cbc558bd3e7739308ff3b8ff8ace6b75c8dcf87135"
+    }
+  ]
+}

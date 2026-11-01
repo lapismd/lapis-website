@@ -1,0 +1,70 @@
+{
+  "name": "@lapismd/lapis-website",
+  "private": true,
+  "version": "0.1.0",
+  "license": "CC-BY-4.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "preview": "astro preview --host 127.0.0.1",
+    "build": "astro build",
+    "check": "pnpm check:format && pnpm snapshots:check && astro check",
+    "check:format": "prettier . --check",
+    "fmt": "prettier . --write",
+    "test": "node --test scripts/*.test.mjs",
+    "test:browser": "playwright test",
+    "snapshots:check": "node scripts/check-snapshots.mjs",
+    "api-docs:import": "node scripts/import-api-docs.mjs",
+    "api-docs:review-source": "node scripts/review-api-source-links.mjs",
+    "media:import": "node scripts/import-media.mjs",
+    "site:check": "node scripts/check-site.mjs",
+    "spec:search": "spec-validator search",
+    "spec:validate": "spec-validator validate",
+    "spec:check": "spec-validator check",
+    "media:capture": "node scripts/capture-media.mjs",
+    "spec:first": "spec-validator first",
+    "spec:build": "spec-validator build",
+    "spec:serve": "spec-validator serve",
+    "spec:index": "spec-validator index"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.39.3",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^6.4.3",
+    "micromatch": "^4.0.8",
+    "sharp": "^0.34.5",
+    "starlight-sidebar-topics": "^0.7.1",
+    "starlight-site-graph": "0.5.0",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@axe-core/playwright": "^4.11.1",
+    "@lapismd/spec-validator": "^0.2.0",
+    "@lapismd/storybook-addon-visual-delta": "^0.1.0",
+    "@playwright/test": "^1.59.1",
+    "cheerio": "^1.1.2",
+    "prettier": "3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "~5.8.3",
+    "wrangler": "^4.0.0"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "starlight-site-graph@0.5.0": "patches/starlight-site-graph@0.5.0.patch",
+      "@astrojs/starlight@0.39.3": "patches/@astrojs__starlight@0.39.3.patch"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapismd/lapis-website.git"
+  }
+}

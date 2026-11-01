@@ -1,0 +1,640 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-01",
+  "scope": "All 79 authored help/developer pages reviewed against source contracts, imported APIs and capture evidence. This is documentation review, not new native platform qualification.",
+  "sources": {
+    "notes": {
+      "repository": "https://github.com/lapismd/lapis-notes",
+      "revision": "60c709ad0425aa5dcd5920436ed65f1504247ee3",
+      "version": "0.2.4",
+      "paths": [
+        "packages/api/src/lib/docs-api.ts",
+        "packages/api/src/lib/plugin.ts",
+        "packages/api/src/lib/context.svelte.ts",
+        "packages/api/src/lib/notifications.ts",
+        "packages/api/src/lib/lapis-extension.ts",
+        "packages/api/src/lib/storage/vault.svelte.ts"
+      ]
+    },
+    "plugins": {
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "paths": [
+        "packages/markdown",
+        "packages/graph",
+        "packages/search",
+        "packages/bases",
+        "packages/canvas",
+        "packages/pdf",
+        "packages/slides"
+      ]
+    },
+    "notebook": {
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "version": "0.2.0",
+      "paths": [
+        "README.md",
+        "src/lib/notebook-plugin.ts",
+        "src/lib/runtime/notebook-output-store.ts",
+        "packages/input/src/dom-runtime.ts",
+        "stories/catalog/website-media.json"
+      ]
+    },
+    "desktop": {
+      "repository": "https://github.com/lapismd/lapis-desktop",
+      "revision": "6b8479ce947fc0eb12fc62edac68ad662fbdd8ad",
+      "paths": [
+        "README.md",
+        "spec/src/current/desktop.md",
+        "spec/src/current/plugins.md",
+        "src/components/vaults/VaultLauncher.svelte"
+      ]
+    },
+    "tasks": {
+      "repository": "https://github.com/lapismd/lapis-plugin-tasks",
+      "revision": "52270c2aa7838811604a20be0861cdbd04027b42",
+      "paths": ["README.md", "AGENTS.md"],
+      "note": "Development planner source does not establish Desktop integration or publication."
+    },
+    "mira": {
+      "repository": "https://github.com/lapismd/mira-mde",
+      "revision": "51912b930411f600e4d559a35fa069fdf4903e3a",
+      "version": "0.1.1",
+      "paths": [
+        "packages/mira/src/preview/markdown-preview.svelte",
+        "packages/mira/src/preview/remark/parity.test.ts",
+        "packages/mira/src/preview/remark/custom-checklists.test.ts"
+      ],
+      "note": "Local portable syntax source reviewed; capture validation uses the separately recorded released consumer cohort."
+    }
+  },
+  "files": [
+    {
+      "path": "src/content/docs/developers/api/app-model.md",
+      "route": "/developers/api/app-model/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "84a1418c029b85c82f4e71503a54b1e39c76f0997f3f983c1cd2e8b91f231513"
+    },
+    {
+      "path": "src/content/docs/developers/api/commands.md",
+      "route": "/developers/api/commands/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "4fa2361ff5b64e43bcb4abe5136ce8fe318b9f37ec97580caef520f7324542bd"
+    },
+    {
+      "path": "src/content/docs/developers/api/configuration-option-sources.md",
+      "route": "/developers/api/configuration-option-sources/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "c4f319a6854e57f72bc8229eec6482608f77192a3ec2ff50c9eef05d976c857f"
+    },
+    {
+      "path": "src/content/docs/developers/api/editor.md",
+      "route": "/developers/api/editor/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "f6967a90ca810c6c3c3fdd163d01caaa6f30f01e59c479acf912819fc19c5a42"
+    },
+    {
+      "path": "src/content/docs/developers/api/events.md",
+      "route": "/developers/api/events/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "69c73c899dd62bc955739fb40044120d10fd5ea88c16680ecd16fbf021505dde"
+    },
+    {
+      "path": "src/content/docs/developers/api/metadata-cache.md",
+      "route": "/developers/api/metadata-cache/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "ef9da9242cad9c6bee76ba9ab2249ec158a5fa27439b6e1e5d4858c94b4b16ab"
+    },
+    {
+      "path": "src/content/docs/developers/api/notices-and-progress.md",
+      "route": "/developers/api/notices-and-progress/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "ded80183b896a0d719a2105c831bc659b79049fd16b6179ae5c31be746987a06"
+    },
+    {
+      "path": "src/content/docs/developers/api/settings.md",
+      "route": "/developers/api/settings/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "798e6eb15f632d13cf825ee81d0de092bc7309ad5b52b9b11626ec80f4984788"
+    },
+    {
+      "path": "src/content/docs/developers/api/vault.md",
+      "route": "/developers/api/vault/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "a690d3e9ea357c9878b0e72b0e004e6ce6202c8fb34dd10a9cbbd94a08e3197c"
+    },
+    {
+      "path": "src/content/docs/developers/api/workspace-views.md",
+      "route": "/developers/api/workspace-views/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "ac5bf21c7070b7e8f1578f12b16d9ae64a7da7cd5061cf0a85a69b6646113dec"
+    },
+    {
+      "path": "src/content/docs/developers/getting-started/development-workflow.md",
+      "route": "/developers/getting-started/development-workflow/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "fb1c7fe67f8a59027309416d5eecb1d74fced1cf4f37732ede80152a8e4e5200"
+    },
+    {
+      "path": "src/content/docs/developers/getting-started/first-plugin.md",
+      "route": "/developers/getting-started/first-plugin/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "547aa28240c1b021a50b495c60c89c0dfd8b00b7d2705f1f492a3098a01b3c2d"
+    },
+    {
+      "path": "src/content/docs/developers/getting-started/manifest.md",
+      "route": "/developers/getting-started/manifest/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "48d6d674874516b2536ac04ee0286af74c570e34b8a4a3996555dc0e57581f08"
+    },
+    {
+      "path": "src/content/docs/developers/getting-started/plugin-lifecycle.md",
+      "route": "/developers/getting-started/plugin-lifecycle/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "1e333018c3c3a4f65849b7e01cff70841d9de0d9d4371e3485adb4de1591805a"
+    },
+    {
+      "path": "src/content/docs/developers/index.md",
+      "route": "/developers/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "111f921379940d67d29bbe1fda1e37b6881bf271da38536b517d3b1ec771a69e"
+    },
+    {
+      "path": "src/content/docs/developers/introduction/runtime-overview.md",
+      "route": "/developers/introduction/runtime-overview/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "6d50413016e0aee1df99c30d8f73dec2047ad3c6aec3007374b4dd1bb60a6d6b"
+    },
+    {
+      "path": "src/content/docs/developers/introduction/what-is-a-lapis-plugin.md",
+      "route": "/developers/introduction/what-is-a-lapis-plugin/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "dcd3e92fd4337f2b3f42012ef041696bb6be51926332def3e9c2fb552967da65"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/codemirror-extensions.md",
+      "route": "/developers/language-extensions/codemirror-extensions/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "2f0db3ff6c4710cc6eca6629ebd7ce9a23dfd51aa7f6253fdd83d2b65314b5ee"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/editor-views-and-associations.md",
+      "route": "/developers/language-extensions/editor-views-and-associations/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "a540fb33ed2ed26a864f5ca10b2d79a725a1b096effe23dc724861d9b2e570be"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/language-services.md",
+      "route": "/developers/language-extensions/language-services/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "2f243ac86f5fe34749b774154c9fbda7bb4dab0786b7706bc1eae3ec59713d88"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/lapis-manifest.md",
+      "route": "/developers/language-extensions/lapis-manifest/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "15d5d1d953919fda65d4d1dbd02f87ee42f696823d482bf239092b450a40009c"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/overview.md",
+      "route": "/developers/language-extensions/overview/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "490399311c11cfa1f574b759f6c87fff3ffbad298f2bb2aff93749a4f03f4af7"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/syntax-and-highlighting.md",
+      "route": "/developers/language-extensions/syntax-and-highlighting/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "9165117bbf7ee720d0202feee4def152dd9ef6f33e79181ccf9e857e7c2302c1"
+    },
+    {
+      "path": "src/content/docs/developers/language-extensions/vscode-to-lapis.md",
+      "route": "/developers/language-extensions/vscode-to-lapis/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "efb8a5f53486093b1f4cef7dedaf4e983e670b92c2260a4d09760f411f46cda8"
+    },
+    {
+      "path": "src/content/docs/developers/publishing/install-community-plugins.md",
+      "route": "/developers/publishing/install-community-plugins/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "0c5539b499b564dc8d37ace0abfd14bde207edfa2ac629d1507750019c58f22b"
+    },
+    {
+      "path": "src/content/docs/developers/publishing/release-checklist.md",
+      "route": "/developers/publishing/release-checklist/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "51df7a1df3cd2d966c17f14447d7642a846b2e39a79d6a0ee3be133779672a31"
+    },
+    {
+      "path": "src/content/docs/developers/publishing/trust-safe-mode.md",
+      "route": "/developers/publishing/trust-safe-mode/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "ed53869ac41e78bc8000c4e8cfe3e1f14cdc9ed6f23a5ac3f307acf5f8103718"
+    },
+    {
+      "path": "src/content/docs/developers/ui-and-css/plugin-css-contract.md",
+      "route": "/developers/ui-and-css/plugin-css-contract/",
+      "sources": ["notes", "plugins"],
+      "review": "Check public API/manifest guidance, owned App, runtime admission and registration cleanup.",
+      "sha256": "23c71513babad723f4921c6002264be673dd4d2193541d966cbdfce676515ebc"
+    },
+    {
+      "path": "src/content/docs/help/desktop-and-web/desktop-app.md",
+      "route": "/help/desktop-and-web/desktop-app/",
+      "sources": ["desktop", "notes"],
+      "review": "Reviewed published Desktop 2026.31.6-rc.1 downloads and platform qualification limits; original behavior review retained.",
+      "sha256": "d16af9be0cd56bf2ad96128a9645178613715a0da77219455fcbc9784a22fb6b",
+      "followUpReviewedOn": "2026-11-13"
+    },
+    {
+      "path": "src/content/docs/help/desktop-and-web/offline-use.md",
+      "route": "/help/desktop-and-web/offline-use/",
+      "sources": ["desktop", "notes"],
+      "review": "Use Tauri preview and local folder workflows; qualify browser storage, platform and download claims.",
+      "sha256": "6f7f0c768fae84d81da99d75106cd531c637989f04f923e9a2edff992f21b2cb"
+    },
+    {
+      "path": "src/content/docs/help/desktop-and-web/pwa-install.md",
+      "route": "/help/desktop-and-web/pwa-install/",
+      "sources": ["desktop", "notes"],
+      "review": "Use Tauri preview and local folder workflows; qualify browser storage, platform and download claims.",
+      "sha256": "f4279eaaa4cbd4600082f911d8e40354c894ed46e247292fdccf8feef84cdee2"
+    },
+    {
+      "path": "src/content/docs/help/editing/advanced-formatting.md",
+      "route": "/help/editing/advanced-formatting/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "3edf2ba173ecf6c10d9593081d6f5a0380515cceef6bfaf0b570a15c9d19101e"
+    },
+    {
+      "path": "src/content/docs/help/editing/basic-formatting.md",
+      "route": "/help/editing/basic-formatting/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "0d06cdfd1650472a33ab51d2019e9bb7f42d602842e2c1006d4a686f3da1dd93"
+    },
+    {
+      "path": "src/content/docs/help/editing/callouts.md",
+      "route": "/help/editing/callouts/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "cb2d35411023b981e8ab53bf54f43b9a37678b8d1d84359bc0f06899399e970f"
+    },
+    {
+      "path": "src/content/docs/help/editing/code-blocks.md",
+      "route": "/help/editing/code-blocks/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "a5ce3aaeb01e90eb544aac6f8d4f1fafbc28fb4c63c11ce1c35cee3dbdc6fcd2"
+    },
+    {
+      "path": "src/content/docs/help/editing/frontmatter-and-properties.md",
+      "route": "/help/editing/frontmatter-and-properties/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "ca7af9085ab134119c5be1a7348d3d0070348c7d84126cb30a2dc2a1de53b0b6"
+    },
+    {
+      "path": "src/content/docs/help/editing/links-embeds-and-tags.md",
+      "route": "/help/editing/links-embeds-and-tags/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "baa2dc5a532918ab15dd6cf9c8e9052ca38a6f8d7fa968097a5acb2af1618b52"
+    },
+    {
+      "path": "src/content/docs/help/editing/markdown-basics.md",
+      "route": "/help/editing/markdown-basics/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "9a5ca06fc9743a33b0c679a8d3a0e1dfcf4eb6b755f56a6303a3beab17482ab0"
+    },
+    {
+      "path": "src/content/docs/help/editing/obsidian-compatibility.md",
+      "route": "/help/editing/obsidian-compatibility/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "5111176f6387583081c0a8b6f9d07005b8339f510c967c987affbd1c3f645582"
+    },
+    {
+      "path": "src/content/docs/help/editing/tables-and-checklists.md",
+      "route": "/help/editing/tables-and-checklists/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "cced02e5ae3836e53b15d86f1533ca5109ecdc04d09931315a203e0c2ff7a8f8"
+    },
+    {
+      "path": "src/content/docs/help/getting-started/create-a-vault.md",
+      "route": "/help/getting-started/create-a-vault/",
+      "sources": ["desktop", "notes"],
+      "review": "Use Tauri preview and local folder workflows; qualify browser storage, platform and download claims.",
+      "sha256": "5308ee00e1dcbc5fd2ba8842114e44316754f53e4b7ae98efeadb5c5db1843b1"
+    },
+    {
+      "path": "src/content/docs/help/getting-started/download-and-install.md",
+      "route": "/help/getting-started/download-and-install/",
+      "sources": ["desktop", "notes"],
+      "review": "Reviewed published Desktop 2026.31.6-rc.1 downloads and platform qualification limits; original behavior review retained.",
+      "sha256": "c2fdb24bf7f0b17a0c7751faa0595cb223a0eb96583fe7e158510c35d695d248",
+      "followUpReviewedOn": "2026-11-13"
+    },
+    {
+      "path": "src/content/docs/help/getting-started/first-note.md",
+      "route": "/help/getting-started/first-note/",
+      "sources": ["desktop", "notes"],
+      "review": "Use Tauri preview and local folder workflows; qualify browser storage, platform and download claims.",
+      "sha256": "cf9caa604f4790541054c122907f706086f01f6b7e0d3d2e14d578438aab5525"
+    },
+    {
+      "path": "src/content/docs/help/getting-started/link-notes.md",
+      "route": "/help/getting-started/link-notes/",
+      "sources": ["desktop", "notes"],
+      "review": "Use Tauri preview and local folder workflows; qualify browser storage, platform and download claims.",
+      "sha256": "c819c8d68dc9a7ecea58884140c99794f51146cbf4f51440e5fad1cec353314a"
+    },
+    {
+      "path": "src/content/docs/help/help-and-support/attributions.md",
+      "route": "/help/help-and-support/attributions/",
+      "sources": ["notes", "desktop", "plugins"],
+      "review": "Route source/issues to GitHub owners, preserve attribution and qualify compatibility.",
+      "sha256": "580b5776d80d016105b3598d3cd89ca4e511ad6c52addaa4a8e29e1db37a12d1"
+    },
+    {
+      "path": "src/content/docs/help/help-and-support/community-links.md",
+      "route": "/help/help-and-support/community-links/",
+      "sources": ["notes", "desktop", "plugins"],
+      "review": "Route source/issues to GitHub owners, preserve attribution and qualify compatibility.",
+      "sha256": "7bd10da3e1e31290dcdae0d4280f82f38eae7d99a8fa4116998b9dff2af51ddb"
+    },
+    {
+      "path": "src/content/docs/help/help-and-support/faq.md",
+      "route": "/help/help-and-support/faq/",
+      "sources": ["notes", "desktop", "plugins"],
+      "review": "Route source/issues to GitHub owners, preserve attribution and qualify compatibility.",
+      "sha256": "4be5fce2de6e64f22c3d4ee7f0ee8eb8bee697c5b31acbef54b7138219b3db41"
+    },
+    {
+      "path": "src/content/docs/help/help-and-support/report-a-bug.md",
+      "route": "/help/help-and-support/report-a-bug/",
+      "sources": ["notes", "desktop", "plugins"],
+      "review": "Route source/issues to GitHub owners, preserve attribution and qualify compatibility.",
+      "sha256": "97b2ef70dd893f57970ecc2df62a6dc6b34a5f58534c1f4db1f5113fea83af95"
+    },
+    {
+      "path": "src/content/docs/help/import/import-from-obsidian.md",
+      "route": "/help/import/import-from-obsidian/",
+      "sources": ["notes", "plugins", "mira"],
+      "review": "Retain portable syntax; distinguish app rendering from static examples and plugin support.",
+      "sha256": "6c8d9052551fe71e4267d3851f027e16500c06201b10b7a207bd8eeea551a37a"
+    },
+    {
+      "path": "src/content/docs/help/index.md",
+      "route": "/help/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "b6dfe35de9805f6a79412bc249c47c95620966a8bb7e5d950771878e72209d9c"
+    },
+    {
+      "path": "src/content/docs/help/notes-and-files/attachments.md",
+      "route": "/help/notes-and-files/attachments/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "0ac099f5dfecdbee6c3f03ea06a887a68b99678e3997efc06325d9117718e462"
+    },
+    {
+      "path": "src/content/docs/help/notes-and-files/frontmatter-properties.md",
+      "route": "/help/notes-and-files/frontmatter-properties/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "cd5f7ac5e3680df6de28d9e0e28487abf5907ee93a6be88160b17f02a1d60bec"
+    },
+    {
+      "path": "src/content/docs/help/notes-and-files/rename-move.md",
+      "route": "/help/notes-and-files/rename-move/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "d534c36edce04a6d4b4c84607ef314bd34330a225b378e14cb4b462aa7941063"
+    },
+    {
+      "path": "src/content/docs/help/plugins/bases.md",
+      "route": "/help/plugins/bases/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "0d12ca32489eb71375757e767414d7e33ee86c3e43d695b3318e3cad8067e145"
+    },
+    {
+      "path": "src/content/docs/help/plugins/canvas.md",
+      "route": "/help/plugins/canvas/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "3ba55c2d1cceb991f6cf93517416088a379cac559650839b07c387a23499b705"
+    },
+    {
+      "path": "src/content/docs/help/plugins/community-plugins.md",
+      "route": "/help/plugins/community-plugins/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "38af23dfedcb363a9806502a04c0e8d69a98fdaabd611ccd92730667487c9fb3"
+    },
+    {
+      "path": "src/content/docs/help/plugins/core-plugins-overview.md",
+      "route": "/help/plugins/core-plugins-overview/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "2364632023bf777a3c4672b3522c6be1f9c1e1ee01b12c032f70cd1bc3d60f6a"
+    },
+    {
+      "path": "src/content/docs/help/plugins/graph-view.md",
+      "route": "/help/plugins/graph-view/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "4fb82ad4b1d950eec2c8ac35ee661374dda1d4dbffdc8dfacb1ffbdae315ac54"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/cells-and-syntax.md",
+      "route": "/help/plugins/notebook/cells-and-syntax/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "f4bf8b30b9342c998e9b227bc2d72c435ca03682b365ecb6310ef6719cad2401"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/execution-and-stale-cells.md",
+      "route": "/help/plugins/notebook/execution-and-stale-cells/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "cbf6752a8a89b84c9b3754c24ba6b1efe89ad7e9c70c0de1d6b5326c8c9fe21f"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/getting-started.md",
+      "route": "/help/plugins/notebook/getting-started/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "862a982ba1c18161a81480d3e4b65cf2b417fcfff58189e91bce55e82254cedd"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/inputs-and-outputs.md",
+      "route": "/help/plugins/notebook/inputs-and-outputs/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "e255f54aa46e4398a51e13363cd517a733d8b16bf0ec7ae3ab13ed11ffd44178"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/limitations.md",
+      "route": "/help/plugins/notebook/limitations/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "4b8ac6d5b7e47c805b624eb49e2e69ad5c88daccecbb960017b39bcf1a2f2d2d"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/panels-and-packages.md",
+      "route": "/help/plugins/notebook/panels-and-packages/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "45edf35c411a4a856c86f4ca4220b88995a55656d669dfe058859617a888857b"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook/sql-and-duckdb.md",
+      "route": "/help/plugins/notebook/sql-and-duckdb/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "b230246ae3a218bf1ef70a9a98a315b2865dfba24ae3f6c5fd8947ac20404231"
+    },
+    {
+      "path": "src/content/docs/help/plugins/notebook.md",
+      "route": "/help/plugins/notebook/",
+      "sources": ["notebook", "notes"],
+      "review": "Update runtime ID, controls, explicit execution, persistence, WASM and current themed captures.",
+      "sha256": "74e90c6bf9c45c7fe905fdaf408a69b9760a02486dde7042eddfa61bfbf5e079"
+    },
+    {
+      "path": "src/content/docs/help/plugins/pdf.md",
+      "route": "/help/plugins/pdf/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "c2cd4484e82af54da38d48ace630cb7ef0faefbe3c1eec30562d047f7cfe9f5a"
+    },
+    {
+      "path": "src/content/docs/help/plugins/safe-mode.md",
+      "route": "/help/plugins/safe-mode/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "7f57dc7b54c153338df102426783fafcb478a321a072c979fd95acb7edef820c"
+    },
+    {
+      "path": "src/content/docs/help/plugins/search.md",
+      "route": "/help/plugins/search/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "923039c0bf74b050b8ff3ccd87e36e071c51f7d52ed701014d9e16712039c51a"
+    },
+    {
+      "path": "src/content/docs/help/plugins/slides.md",
+      "route": "/help/plugins/slides/",
+      "sources": ["notes", "plugins", "desktop"],
+      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
+      "sha256": "cda89d385d82a3b371f69ca54778ff13e07f88ae20ba8e55348d1123021b54b4"
+    },
+    {
+      "path": "src/content/docs/help/plugins/tasks.md",
+      "route": "/help/plugins/tasks/",
+      "sources": ["desktop", "tasks"],
+      "review": "Replace legacy view promises with current Desktop indexing/query status and owning-source link.",
+      "sha256": "ac7144b84c35bd80c3cbec97ab33898697f41863ba35131260cfd7fa25e3e239"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/command-palette.md",
+      "route": "/help/user-interface/command-palette/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "1a04e92c05cd98bb5d59cb9540cb00add1ea3f588515cbeb8b437b41b9eb8f8c"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/editor-associations.md",
+      "route": "/help/user-interface/editor-associations/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "089bdcd4ae4139f5d5bb8996df81ae21f05a8bdd82a185c69ec0a9967b69fb62"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/keyboard-shortcuts.md",
+      "route": "/help/user-interface/keyboard-shortcuts/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "d40aadfd96553b80d7964d88d0ee4e0e583a1b1babfdd47bdd4ae2fd62298a5b"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/progress-and-notifications.md",
+      "route": "/help/user-interface/progress-and-notifications/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "a1018881f037d288fbcc1e8c8f8f500be46f596632635e9169311c653c56aef7"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/settings.md",
+      "route": "/help/user-interface/settings/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "4b5583507b62904fecf55457a07bbac80e38834ac46261b5df01af9b8fa16017"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/sidebar.md",
+      "route": "/help/user-interface/sidebar/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "24746a49ac21c6918dc9a5d8cf04ca4ebec3c4a73c52a91f9130bc5a8d6906a0"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/tabs.md",
+      "route": "/help/user-interface/tabs/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "a7bfd380d3c4f327e6ed15c93c8e20bad43f60c387bcc1f7b51a75432e13e14f"
+    },
+    {
+      "path": "src/content/docs/help/user-interface/workspace-layout.md",
+      "route": "/help/user-interface/workspace-layout/",
+      "sources": ["notes"],
+      "review": "Retain practical guidance; align public names and host/plugin boundaries.",
+      "sha256": "fec9e2a3d1a9c536a54fcac84da4302146801e9249119a02bad1092184e647e4"
+    }
+  ],
+  "followUpReviews": [
+    {
+      "reviewedOn": "2026-11-13",
+      "scope": "Published Desktop preview downloads and platform limitations",
+      "evidence": "snapshots/desktop-release.json",
+      "paths": [
+        "src/content/docs/help/desktop-and-web/desktop-app.md",
+        "src/content/docs/help/getting-started/download-and-install.md"
+      ]
+    }
+  ]
+}

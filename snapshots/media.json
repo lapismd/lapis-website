@@ -1,0 +1,719 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "media/ai-banner.dark.webp",
+      "sourcePath": "packages/ai/registry-assets/banner.dark.webp",
+      "storyId": "plugins-ai-registry-screenshots--overview",
+      "alt": "Lapis AI with conversation History on the left, a populated Chat in the main workspace, and the capability Catalog on the right.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/ai",
+      "version": "0.1.6",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "1094a6c660908ce3086f8d55a784648b589126972c571efb7b0ad00270140dc7"
+    },
+    {
+      "path": "media/ai-banner.light.webp",
+      "sourcePath": "packages/ai/registry-assets/banner.light.webp",
+      "storyId": "plugins-ai-registry-screenshots--overview",
+      "alt": "Lapis AI with conversation History on the left, a populated Chat in the main workspace, and the capability Catalog on the right.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/ai",
+      "version": "0.1.6",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "0497103a8386a8aab8dd4de462570a048da72c54fd0b5be12575f4d57bc2208c"
+    },
+    {
+      "path": "media/ai-overview.dark.webp",
+      "sourcePath": "packages/ai/registry-assets/overview.dark.webp",
+      "storyId": "plugins-ai-registry-screenshots--chat-with-tool-activity",
+      "alt": "Focused Lapis AI chat showing a completed tool call and its result in the full workspace.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/ai",
+      "version": "0.1.6",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "59a76b468f833b36e65a14cd68340784730bf3f0699bf67e9ca5f1205ed8ad13"
+    },
+    {
+      "path": "media/ai-overview.light.webp",
+      "sourcePath": "packages/ai/registry-assets/overview.light.webp",
+      "storyId": "plugins-ai-registry-screenshots--chat-with-tool-activity",
+      "alt": "Focused Lapis AI chat showing a completed tool call and its result in the full workspace.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/ai",
+      "version": "0.1.6",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "8250ecaadb2adcf4b7e1ea25f00012f6f1c77ec7700b58bc58ce9722fbe3d8d6"
+    },
+    {
+      "path": "media/bases-banner.dark.webp",
+      "sourcePath": "packages/bases/registry-assets/banner.dark.webp",
+      "storyId": "plugins-bases-registry-screenshots--overview",
+      "alt": "Lapis Bases showing a populated project cover-card view with real artwork and useful properties.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/bases",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "2d0961115467c938b07249bdbbac7d7e4cf5aabc60dd716010b3207bd92401d1"
+    },
+    {
+      "path": "media/bases-banner.light.webp",
+      "sourcePath": "packages/bases/registry-assets/banner.light.webp",
+      "storyId": "plugins-bases-registry-screenshots--overview",
+      "alt": "Lapis Bases showing a populated project cover-card view with real artwork and useful properties.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/bases",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "27895c70d45dc316e355696346c1882e9f76a1344596a0bea1ada80faa4b5bf9"
+    },
+    {
+      "path": "media/bases-overview.dark.webp",
+      "sourcePath": "packages/bases/registry-assets/overview.dark.webp",
+      "storyId": "plugins-bases-registry-screenshots--grouped-list",
+      "alt": "Lapis Bases grouped list view with populated project records and grouping controls open.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/bases",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "f02d7d01a04ecc735ed7185879068e9a21482182c87bd87053f096d80eca9987"
+    },
+    {
+      "path": "media/bases-overview.light.webp",
+      "sourcePath": "packages/bases/registry-assets/overview.light.webp",
+      "storyId": "plugins-bases-registry-screenshots--grouped-list",
+      "alt": "Lapis Bases grouped list view with populated project records and grouping controls open.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/bases",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "9bf19ed525a396fd39e018b4195a4d81f13cea0ab3e1179040a12fd7dac91f17"
+    },
+    {
+      "path": "media/canvas-banner.dark.webp",
+      "sourcePath": "packages/canvas/registry-assets/banner.dark.webp",
+      "storyId": "plugins-canvas-registry-screenshots--overview",
+      "alt": "Lapis Canvas showing the feature board with a text note, two file notes, a link, a group, and three labeled connectors, both sidebars closed.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/canvas",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "9c3845cc4d1910847b1870fb5360d2c8966f8d3f35af4923cd6a6fdca0151851"
+    },
+    {
+      "path": "media/canvas-banner.light.webp",
+      "sourcePath": "packages/canvas/registry-assets/banner.light.webp",
+      "storyId": "plugins-canvas-registry-screenshots--overview",
+      "alt": "Lapis Canvas showing the feature board with a text note, two file notes, a link, a group, and three labeled connectors, both sidebars closed.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/canvas",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "dbe003170b5dc10614eec44bd13bc74f5632645a4fe8631c375b6b94cb2d6de9"
+    },
+    {
+      "path": "media/community-banner.dark.webp",
+      "sourcePath": "packages/community/registry-assets/banner.dark.webp",
+      "storyId": "plugins-community-registry-screenshots--overview",
+      "alt": "The Community plugin showing the host-configured verified plugin registry.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/community",
+      "version": "0.1.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "8d1bd78470a0bc66e363908456124a6f26d4464ef3f387b19c21ee102f131a69"
+    },
+    {
+      "path": "media/community-banner.light.webp",
+      "sourcePath": "packages/community/registry-assets/banner.light.webp",
+      "storyId": "plugins-community-registry-screenshots--overview",
+      "alt": "The Community plugin showing the host-configured verified plugin registry.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/community",
+      "version": "0.1.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "2eae3c297aea47d2f267b5a3025187ad00dd9b90c4448dc795782df5e2a38f5f"
+    },
+    {
+      "path": "media/desktop-launcher.dark.webp",
+      "sha256": "bbb7a793619b698db1bf93faa589c857b544ad81a2ed86572645af5ed36c07cd",
+      "storyId": "desktop-website-media--launcher",
+      "alt": "The Desktop vault launcher before a vault has been opened.",
+      "theme": "dark",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "6b8479ce947fc0eb12fc62edac68ad662fbdd8ad",
+      "repository": "https://github.com/lapismd/lapis-desktop",
+      "packageName": "@lapismd/lapis-desktop",
+      "version": "0.1.0",
+      "sourcePath": "desktop-launcher.dark.webp"
+    },
+    {
+      "path": "media/desktop-launcher.light.webp",
+      "sha256": "c3b407bae74439bab3788574cfd67d849a2609d26ac1f96d0dd8f08655019ed3",
+      "storyId": "desktop-website-media--launcher",
+      "alt": "The Desktop vault launcher before a vault has been opened.",
+      "theme": "light",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "6b8479ce947fc0eb12fc62edac68ad662fbdd8ad",
+      "repository": "https://github.com/lapismd/lapis-desktop",
+      "packageName": "@lapismd/lapis-desktop",
+      "version": "0.1.0",
+      "sourcePath": "desktop-launcher.light.webp"
+    },
+    {
+      "path": "media/desktop-workspace.dark.webp",
+      "sha256": "141487f73c28f68c439d43412773f1985996fef702715a1231afdf8a7592cf4d",
+      "storyId": "desktop-website-media--workspace",
+      "alt": "The Tauri Desktop Notes workspace with Explorer and a project note.",
+      "theme": "dark",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "6b8479ce947fc0eb12fc62edac68ad662fbdd8ad",
+      "repository": "https://github.com/lapismd/lapis-desktop",
+      "packageName": "@lapismd/lapis-desktop",
+      "version": "0.1.0",
+      "sourcePath": "desktop-workspace.dark.webp"
+    },
+    {
+      "path": "media/desktop-workspace.light.webp",
+      "sha256": "f08b8e18b6c20a783ebcd9f95c7a340fc89119723d0979f7b64e22278bf26e3f",
+      "storyId": "desktop-website-media--workspace",
+      "alt": "The Tauri Desktop Notes workspace with Explorer and a project note.",
+      "theme": "light",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "6b8479ce947fc0eb12fc62edac68ad662fbdd8ad",
+      "repository": "https://github.com/lapismd/lapis-desktop",
+      "packageName": "@lapismd/lapis-desktop",
+      "version": "0.1.0",
+      "sourcePath": "desktop-workspace.light.webp"
+    },
+    {
+      "path": "media/graph-banner.dark.webp",
+      "sourcePath": "packages/graph/registry-assets/banner.dark.webp",
+      "storyId": "plugins-graph-registry-screenshots--overview",
+      "alt": "Lapis Graph with Explorer on the left, a connected Global Graph in the main workspace, and Local Graph on the right.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/graph",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "f9cd2183ae811f522f33ab7cf49f237c095f3eebf4e3d60655fd5587c81d839c"
+    },
+    {
+      "path": "media/graph-banner.light.webp",
+      "sourcePath": "packages/graph/registry-assets/banner.light.webp",
+      "storyId": "plugins-graph-registry-screenshots--overview",
+      "alt": "Lapis Graph with Explorer on the left, a connected Global Graph in the main workspace, and Local Graph on the right.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/graph",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "95446430f2164b82fbb8c4cebfdb0d2aabbc03652f4f9cc8a036ab07608b689c"
+    },
+    {
+      "path": "media/graph-overview.dark.webp",
+      "sourcePath": "packages/graph/registry-assets/overview.dark.webp",
+      "storyId": "plugins-graph-registry-screenshots--global-graph",
+      "alt": "Focused Lapis Global Graph showing connected notes, tags, attachments, and unresolved links.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/graph",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "8ca739681060f8c5f863b8d687cd28ff4a3d8a08c13ea6017d54d597c6aeac22"
+    },
+    {
+      "path": "media/graph-overview.light.webp",
+      "sourcePath": "packages/graph/registry-assets/overview.light.webp",
+      "storyId": "plugins-graph-registry-screenshots--global-graph",
+      "alt": "Focused Lapis Global Graph showing connected notes, tags, attachments, and unresolved links.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/graph",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "b070d6bd91e108444f43275a2faaefc3b3170d7ed3913ca094b4fb6cde8ea498"
+    },
+    {
+      "path": "media/history-banner.dark.webp",
+      "sourcePath": "packages/history/registry-assets/banner.dark.webp",
+      "storyId": "plugins-history-registry-screenshots--overview",
+      "alt": "Lapis History with Explorer on the left, a revision comparison in the main workspace, and History on the right.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/history",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "bf5525fa7901156a8e2976f5a6c59665e9054639adf923b6eb400af923f910c0"
+    },
+    {
+      "path": "media/history-banner.light.webp",
+      "sourcePath": "packages/history/registry-assets/banner.light.webp",
+      "storyId": "plugins-history-registry-screenshots--overview",
+      "alt": "Lapis History with Explorer on the left, a revision comparison in the main workspace, and History on the right.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/history",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "e0bc2c9c2c70ac13baafdcbb47b5a7d7b7e3ed434d7e45899a009d20ab61a813"
+    },
+    {
+      "path": "media/history-overview.dark.webp",
+      "sourcePath": "packages/history/registry-assets/overview.dark.webp",
+      "storyId": "plugins-history-registry-screenshots--compare",
+      "alt": "Lapis History Compare view showing changes between two revisions in the full workspace.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/history",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "5d08e684230fc3a646cdbe982db8c080549433e3bb491067fcb5045b9fe69ba1"
+    },
+    {
+      "path": "media/history-overview.light.webp",
+      "sourcePath": "packages/history/registry-assets/overview.light.webp",
+      "storyId": "plugins-history-registry-screenshots--compare",
+      "alt": "Lapis History Compare view showing changes between two revisions in the full workspace.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/history",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "b7bac93dc961f958716f9a0311943d3e0f72feaee51776e1cb6a757e7e69b049"
+    },
+    {
+      "path": "media/markdown-banner.dark.webp",
+      "sourcePath": "packages/markdown/registry-assets/banner.dark.webp",
+      "storyId": "plugins-markdown-registry-screenshots--overview",
+      "alt": "Lapis Markdown with Backlinks on the left, Live Preview in the main workspace, and File Properties on the right.",
+      "theme": "dark",
+      "revision": "003d7d27cab3316297d95e8088cffc7e9742f5f4",
+      "packageName": "@lapis-notes/markdown",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "1218ae865bf17e4c73da68b4f92e7fb35741abc56accbb8156cd59d0751be0db"
+    },
+    {
+      "path": "media/markdown-banner.light.webp",
+      "sourcePath": "packages/markdown/registry-assets/banner.light.webp",
+      "storyId": "plugins-markdown-registry-screenshots--overview",
+      "alt": "Lapis Markdown with Backlinks on the left, Live Preview in the main workspace, and File Properties on the right.",
+      "theme": "light",
+      "revision": "003d7d27cab3316297d95e8088cffc7e9742f5f4",
+      "packageName": "@lapis-notes/markdown",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "694b75bf931fc2a179d4b7782510d598040dc10fbdb534388311d90a47446333"
+    },
+    {
+      "path": "media/markdown-overview.dark.webp",
+      "sourcePath": "packages/markdown/registry-assets/overview.dark.webp",
+      "storyId": "plugins-markdown-registry-screenshots--reading",
+      "alt": "Lapis Markdown Reading view rendering a richly structured project note in the full workspace.",
+      "theme": "dark",
+      "revision": "003d7d27cab3316297d95e8088cffc7e9742f5f4",
+      "packageName": "@lapis-notes/markdown",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "f61efc35115a5d051ed6b9f9673f7f1f1647f7314f3a84eb4e30df2af54ad83e"
+    },
+    {
+      "path": "media/markdown-overview.light.webp",
+      "sourcePath": "packages/markdown/registry-assets/overview.light.webp",
+      "storyId": "plugins-markdown-registry-screenshots--reading",
+      "alt": "Lapis Markdown Reading view rendering a richly structured project note in the full workspace.",
+      "theme": "light",
+      "revision": "003d7d27cab3316297d95e8088cffc7e9742f5f4",
+      "packageName": "@lapis-notes/markdown",
+      "version": "0.2.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "b61c2dddc386eb7536afe33e47e2e612539aa88ccadaea99e8569ca8498066c2"
+    },
+    {
+      "path": "media/notebook-inputs.dark.webp",
+      "sha256": "81a0fa01a7ef1be3ff54a17086ccb9db339788455c97d2fcdf778e42f5ab3b6f",
+      "storyId": "plugins-notebook-website-media--inputs",
+      "alt": "Interactive Notebook inputs and calculated outputs in the workspace.",
+      "theme": "dark",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-inputs.dark.webp"
+    },
+    {
+      "path": "media/notebook-inputs.light.webp",
+      "sha256": "beebbdd7c735fe6993b3075d19a814689d73bceafe4ca3ac123c17de4ede127b",
+      "storyId": "plugins-notebook-website-media--inputs",
+      "alt": "Interactive Notebook inputs and calculated outputs in the workspace.",
+      "theme": "light",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-inputs.light.webp"
+    },
+    {
+      "path": "media/notebook-panels.dark.webp",
+      "sha256": "ca0be5343fa36d1e026ca5e299344241b19b020bb4efc7bc3b5a4a0bc70002db",
+      "storyId": "plugins-notebook-website-media--panels",
+      "alt": "A notebook beside its shared workspace side-panel group.",
+      "theme": "dark",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-panels.dark.webp"
+    },
+    {
+      "path": "media/notebook-panels.light.webp",
+      "sha256": "ce91c559412f05a1f1b822467552f94d5e5d13c8c5291d31cd0be8cb4224aa5e",
+      "storyId": "plugins-notebook-website-media--panels",
+      "alt": "A notebook beside its shared workspace side-panel group.",
+      "theme": "light",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-panels.light.webp"
+    },
+    {
+      "path": "media/notebook-workspace.dark.webp",
+      "sha256": "9ef02d438c8e0a67bac14a2ab2a6681ade9b2da8ad498119779ecf582bb2a1f3",
+      "storyId": "plugins-notebook-website-media--workspace",
+      "alt": "A notebook with executed cells in the real Notes workspace.",
+      "theme": "dark",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-workspace.dark.webp"
+    },
+    {
+      "path": "media/notebook-workspace.light.webp",
+      "sha256": "be4ecee607d055ec64d22eaeb6d013cef90985d3f45c865eb2acdc6d5f573315",
+      "storyId": "plugins-notebook-website-media--workspace",
+      "alt": "A notebook with executed cells in the real Notes workspace.",
+      "theme": "light",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "revision": "907a20c6983a385f7be5a1f647f01900f5296b70",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "packageName": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.0",
+      "sourcePath": "notebook-workspace.light.webp"
+    },
+    {
+      "path": "media/pdf-banner.dark.webp",
+      "sourcePath": "packages/pdf/registry-assets/banner.dark.webp",
+      "storyId": "plugins-pdf-registry-screenshots--overview",
+      "alt": "Lapis PDF showing a harbor survey with a photograph, two columns, and a table, both sidebars closed.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/pdf",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "3d2033137f1ea15b7773305738d4ab05a008a9211a3b999c49d76651bb5c85b1"
+    },
+    {
+      "path": "media/pdf-banner.light.webp",
+      "sourcePath": "packages/pdf/registry-assets/banner.light.webp",
+      "storyId": "plugins-pdf-registry-screenshots--overview",
+      "alt": "Lapis PDF showing a harbor survey with a photograph, two columns, and a table, both sidebars closed.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/pdf",
+      "version": "0.2.0",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "5d61fe24565745acd959aab778d4fc4c4b77fa81afc4b75246deeca62d6e8fcb"
+    },
+    {
+      "path": "media/search-banner.dark.webp",
+      "sourcePath": "packages/search/registry-assets/banner.dark.webp",
+      "storyId": "plugins-search-registry-screenshots--overview",
+      "alt": "Lapis Search with populated indexed results in the primary left sidebar beside an empty main workspace.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/search",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "c507b6d461f1a19d2ef64237727de2e9715e7334ae4e4e17e6dc926f055dd910"
+    },
+    {
+      "path": "media/search-banner.light.webp",
+      "sourcePath": "packages/search/registry-assets/banner.light.webp",
+      "storyId": "plugins-search-registry-screenshots--overview",
+      "alt": "Lapis Search with populated indexed results in the primary left sidebar beside an empty main workspace.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/search",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "3f317a3fa7ba934596cadd500f0f0bdb7ff74a72124231a7245ce37ece2f250f"
+    },
+    {
+      "path": "media/search-overview.dark.webp",
+      "sourcePath": "packages/search/registry-assets/overview.dark.webp",
+      "storyId": "plugins-search-registry-screenshots--search-filters",
+      "alt": "Lapis Search with populated results and its filter and view settings open.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/search",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "ad4922ab8a1539d6fb6f0f6b196ad7c3883ea1ca5bf405ad18cbbefd1dc543d1"
+    },
+    {
+      "path": "media/search-overview.light.webp",
+      "sourcePath": "packages/search/registry-assets/overview.light.webp",
+      "storyId": "plugins-search-registry-screenshots--search-filters",
+      "alt": "Lapis Search with populated results and its filter and view settings open.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/search",
+      "version": "0.1.4",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "5b9cc1d08b3e6bf34067b388f9ec047c677aa5bbfaeeb68772e9fb7e7ede6712"
+    },
+    {
+      "path": "media/slides-banner.dark.webp",
+      "sourcePath": "packages/slides/registry-assets/banner.dark.webp",
+      "storyId": "plugins-slides-registry-screenshots--presentation",
+      "alt": "Slides full-screen presentation showing the Goals slide from the Release Walkthrough Markdown fixture.",
+      "theme": "dark",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/slides",
+      "version": "0.1.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "dea36a9bcc9f5e84b77cc396baa347f2bf311392ef0479c79f5690385b01bbd6"
+    },
+    {
+      "path": "media/slides-banner.light.webp",
+      "sourcePath": "packages/slides/registry-assets/banner.light.webp",
+      "storyId": "plugins-slides-registry-screenshots--presentation",
+      "alt": "Slides full-screen presentation showing the Goals slide from the Release Walkthrough Markdown fixture.",
+      "theme": "light",
+      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "packageName": "@lapis-notes/slides",
+      "version": "0.1.1",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "viewport": {
+        "width": 1200,
+        "height": 800
+      },
+      "deviceScaleFactor": 2,
+      "sha256": "68e5f5f5769f47dbf0e90f1be949e5e183e7e09d34d17b324f0d8cb0a3337ae5"
+    }
+  ]
+}

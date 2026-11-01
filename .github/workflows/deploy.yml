@@ -1,0 +1,54 @@
+name: Deploy reviewed website
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        options: [preview, production]
+        default: preview
+        required: true
+      legacy_publisher_disabled:
+        description: Confirm the legacy publisher is disabled before production cutover
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: lapis-md-${{ inputs.target }}
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce production cutover prerequisite
+        if: inputs.target == 'production' && !inputs.legacy_publisher_disabled
+        run: exit 1
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: mdbook@0.4.52
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check && pnpm test && pnpm spec:check && pnpm build && pnpm site:check
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:browser
+      - name: Deploy prebuilt static output
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DEPLOY_TARGET: ${{ inputs.target }}
+        run: |
+          if [ "$DEPLOY_TARGET" = production ]; then
+            deploy_branch=main
+          else
+            deploy_branch=website-preview
+          fi
+          pnpm exec wrangler pages deploy dist --project-name=lapis-md --branch="$deploy_branch" --commit-hash="$GITHUB_SHA"
+      - name: Verify the deployed website
+        env:
+          LAPIS_WEBSITE_BASE_URL: ${{ inputs.target == 'production' && 'https://lapis.md' || 'https://website-preview.lapis-md.pages.dev' }}
+        run: pnpm test:browser

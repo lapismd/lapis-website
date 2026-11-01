@@ -1,0 +1,199 @@
+---
+import MobileTableOfContents from "@astrojs/starlight/components/MobileTableOfContents.astro";
+import TableOfContents from "@astrojs/starlight/components/TableOfContents.astro";
+import { PageGraph } from "starlight-site-graph/components";
+---
+
+{
+  Astro.locals.starlightRoute.toc && (
+    <>
+      <div class="lg:sl-hidden">
+        <MobileTableOfContents />
+      </div>
+      <div class="right-sidebar-panel sl-hidden lg:sl-block">
+        <div class="sl-container">
+          <PageGraph class="docs-graph-panel" trailingSlashes={true}>
+            <h2 slot="title">INTERACTIVE GRAPH</h2>
+          </PageGraph>
+          <TableOfContents />
+        </div>
+      </div>
+    </>
+  )
+}
+
+<style>
+  @layer starlight.core {
+    .right-sidebar-panel {
+      padding: 1.25rem 1rem;
+    }
+
+    .sl-container {
+      display: grid;
+      gap: 1.25rem;
+      width: min(100%, var(--lapis-toc-width, 18.75rem));
+      max-width: var(--lapis-toc-width, 18.75rem);
+    }
+
+    .right-sidebar-panel :global(h2) {
+      margin-bottom: 0.75rem;
+      color: var(--lapis-ink);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: var(--sl-line-height-headings);
+      text-transform: uppercase;
+    }
+
+    .right-sidebar-panel :global(:where(a)) {
+      display: block;
+      border-radius: 6px;
+      padding: 0.3rem 0.5rem;
+      color: var(--lapis-ink-subtle);
+      font-size: var(--sl-text-xs);
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+      text-decoration: none;
+    }
+
+    .right-sidebar-panel :global(:where(a):hover),
+    .right-sidebar-panel :global(:where(a[aria-current="true"])) {
+      background: color-mix(in srgb, var(--lapis-surface-1) 86%, transparent);
+      color: var(--lapis-ink);
+    }
+
+    .right-sidebar-panel :global(:where(ul)) {
+      display: grid;
+      gap: 0.125rem;
+    }
+
+    .right-sidebar-panel :global(:where(li)) {
+      margin: 0;
+    }
+
+    .right-sidebar-panel :global(:where(li[style*="--depth: 1"] a)) {
+      padding-inline-start: 1rem;
+    }
+
+    .right-sidebar-panel :global(:where(li[style*="--depth: 2"] a)) {
+      padding-inline-start: 1.5rem;
+    }
+  }
+
+  .right-sidebar-panel :global(.docs-graph-panel) {
+    --slsg-graph-width: 100%;
+    --slsg-graph-height: 13.75rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .right-sidebar-panel :global(.docs-graph-panel h2) {
+    margin-bottom: 0;
+    color: var(--lapis-ink);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: var(--sl-line-height-headings);
+    text-transform: uppercase;
+  }
+
+  .right-sidebar-panel :global(.docs-graph-panel .slsg-graph-container) {
+    outline-color: var(--lapis-hairline-strong);
+  }
+</style>
+
+<script>
+  const graphPanelSelector = ".docs-graph-panel";
+  const graphComponentSelector = "graph-component";
+  const graphContainerSelector = ".slsg-graph-container";
+  const sidebarGraphScale = 0.95;
+  const fullscreenGraphScale = 1.45;
+
+  function simplifyGraphSlug(value: string | undefined): string {
+    let slug = (value || "/").replace(/^\/+/, "").replace(/\/+$/, "");
+
+    if (slug.endsWith("/index")) {
+      slug = slug.slice(0, -"/index".length).replace(/\/+$/, "");
+    }
+
+    return slug || "/";
+  }
+
+  function parseSitemap(graph: HTMLElement): Record<string, unknown> {
+    try {
+      return JSON.parse(graph.dataset.sitemap || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function sitemapHasSlug(
+    sitemap: Record<string, unknown>,
+    slug: string | undefined,
+  ) {
+    return Object.keys(sitemap).some(
+      (key) => simplifyGraphSlug(key) === simplifyGraphSlug(slug),
+    );
+  }
+
+  function updateGraphPanelVisibility(panel: HTMLElement) {
+    const graph = panel.querySelector<HTMLElement>(graphComponentSelector);
+    if (!graph) {
+      return;
+    }
+
+    const sitemap = parseSitemap(graph);
+    const hasData = sitemapHasSlug(sitemap, graph.dataset.slug);
+    panel.hidden = !hasData;
+  }
+
+  function updateGraphScale(graph: HTMLElement) {
+    const container = graph.querySelector<HTMLElement>(graphContainerSelector);
+    const scale = container?.classList.contains("slsg-is-fullscreen")
+      ? fullscreenGraphScale
+      : sidebarGraphScale;
+
+    try {
+      const config = JSON.parse(graph.dataset.config || "{}");
+      if (config.scale === scale) {
+        return;
+      }
+
+      graph.dataset.config = JSON.stringify({ ...config, scale });
+    } catch {
+      return;
+    }
+  }
+
+  function initializeDocsGraphPanel(panel: HTMLElement) {
+    const graph = panel.querySelector<HTMLElement>(graphComponentSelector);
+    const container = graph?.querySelector<HTMLElement>(graphContainerSelector);
+    if (!graph) {
+      return;
+    }
+
+    updateGraphPanelVisibility(panel);
+    updateGraphScale(graph);
+
+    new MutationObserver(() => updateGraphPanelVisibility(panel)).observe(
+      graph,
+      {
+        attributes: true,
+        attributeFilter: ["data-sitemap", "data-slug"],
+      },
+    );
+
+    if (container) {
+      new MutationObserver(() => updateGraphScale(graph)).observe(container, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document
+      .querySelectorAll<HTMLElement>(graphPanelSelector)
+      .forEach(initializeDocsGraphPanel);
+  });
+</script>

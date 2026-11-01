@@ -1,0 +1,79 @@
+---
+const appUrl = "/help/getting-started/download-and-install/";
+const year = new Date().getFullYear();
+
+const columns = [
+  {
+    title: "Lapis Notes",
+    links: [
+      { label: "Overview", href: "/" },
+      { label: "Help", href: "/help/" },
+      { label: "Developers", href: "/developers/" },
+      { label: "Desktop preview", href: appUrl },
+    ],
+  },
+  {
+    title: "Learn",
+    links: [
+      {
+        label: "Getting started",
+        href: "/help/getting-started/create-a-vault/",
+      },
+      { label: "FAQ", href: "/help/help-and-support/faq/" },
+      {
+        label: "Attributions",
+        href: "/help/help-and-support/attributions/",
+      },
+      {
+        label: "Report a bug",
+        href: "/help/help-and-support/report-a-bug/",
+      },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "License", href: "/license/" },
+      { label: "Terms", href: "/terms/" },
+      { label: "Privacy", href: "/privacy/" },
+    ],
+  },
+  {
+    title: "Community",
+    links: [
+      {
+        label: "Source",
+        href: "https://github.com/lapismd/lapis-desktop",
+      },
+      {
+        label: "Community links",
+        href: "/help/help-and-support/community-links/",
+      },
+    ],
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      {
+        columns.map((column) => (
+          <div class="site-footer__column">
+            <h2 class="site-footer__heading">{column.title}</h2>
+            <ul class="site-footer__list">
+              {column.links.map((link) => (
+                <li>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">© {year} Lapis Notes</p>
+    </div>
+  </div>
+</footer>
