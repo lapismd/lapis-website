@@ -44,6 +44,5 @@ organization deployment secrets. A local OAuth session does not configure them.
 6. If acceptance fails, roll back to the recorded prior Pages deployment; keep
    the legacy publisher disabled so rollback is not overwritten.
 
-No live Pages resources, secrets, DNS, legacy workflows or deployments are changed
-by the local migration. The first public deployment may describe a preview;
+Local builds do not change Pages resources, secrets, DNS, legacy workflows or deployments. The first public deployment may describe a preview;
 installer links require actual published Desktop assets.

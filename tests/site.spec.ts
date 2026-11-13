@@ -98,6 +98,9 @@ for (const route of [
   "/help/getting-started/download-and-install/",
   "/developers/",
   "/developers/api-reference/class-docs/app/",
+  "/help/plugins/core-plugins-overview/",
+  "/help/plugins/bases/",
+  "/help/plugins/docs/",
   "/privacy/",
   "/license/",
   "/terms/",
@@ -216,3 +219,73 @@ test("documentation links underline only on hover", async ({ page }) => {
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
 });
+
+for (const width of [375, 1440]) {
+  test(`complete plugin inventory and new guides at ${width}px`, async ({
+    page,
+  }, testInfo) => {
+    await page.setViewportSize({ width, height: 988 });
+    await page.goto("/help/plugins/core-plugins-overview/");
+    async function selectTheme(theme: string) {
+      const menu = page.getByRole("button", { name: "Menu", exact: true });
+      if (width < 800) await menu.click();
+      await page
+        .getByRole("combobox", { name: "Select theme" })
+        .selectOption(theme);
+      if (width < 800) await menu.click();
+    }
+    const content = page.locator(".sl-markdown-content");
+    await expect(content).toContainText("26 known plugins");
+    await expect(content.locator("table tbody tr")).toHaveCount(19);
+    await page.screenshot({
+      path: testInfo.outputPath("plugin-overview.png"),
+      fullPage: true,
+    });
+    await content.getByRole("link", { name: "Docs", exact: true }).click();
+    await expect(page.locator("h1")).toHaveText("Docs");
+    await expect(page.locator(".sl-markdown-content")).toContainText(
+      "Open docs",
+    );
+    for (const theme of ["light", "dark"]) {
+      await selectTheme(theme);
+      await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      ).toBe(true);
+    }
+    await page.goto("/help/plugins/nostr-sync/");
+    await expect(page.locator(".sl-markdown-content")).toContainText(
+      "disabled by default",
+    );
+    await expect(
+      page.locator('.sl-markdown-content a[href*="lapis-plugin-nostr-sync"]'),
+    ).toHaveCount(0);
+    await page.goto("/help/plugins/bases/");
+    for (const theme of ["light", "dark"]) {
+      await selectTheme(theme);
+      const images = page.locator(
+        `.product-media img[data-product-theme="${theme}"]`,
+      );
+      await expect(images).toHaveCount(2);
+      for (const img of await images.all()) {
+        await img.scrollIntoViewIfNeeded();
+        await expect
+          .poll(() =>
+            img.evaluate(
+              (node: HTMLImageElement) =>
+                node.complete &&
+                node.naturalWidth === 2400 &&
+                node.naturalHeight === 1600,
+            ),
+          )
+          .toBe(true);
+      }
+    }
+    await page.screenshot({
+      path: testInfo.outputPath("bases-dark.png"),
+      fullPage: true,
+    });
+  });
+}

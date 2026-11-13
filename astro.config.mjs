@@ -78,7 +78,7 @@ const helpSidebar = [
     label: "Plugins",
     items: [
       {
-        label: "Core plugins overview",
+        label: "First-party plugins",
         link: "/help/plugins/core-plugins-overview/",
       },
       { label: "Search", link: "/help/plugins/search/" },
@@ -122,6 +122,45 @@ const helpSidebar = [
       },
       { label: "Slides", link: "/help/plugins/slides/" },
       { label: "PDF", link: "/help/plugins/pdf/" },
+      {
+        label: "Editing and files",
+        collapsed: true,
+        items: [
+          { label: "Markdown", link: "/help/plugins/markdown/" },
+          { label: "Source Editor", link: "/help/plugins/source-editor/" },
+          { label: "File Explorer", link: "/help/plugins/file-explorer/" },
+          { label: "CSV", link: "/help/plugins/csv/" },
+          { label: "Word documents", link: "/help/plugins/docx/" },
+          { label: "Transcripts", link: "/help/plugins/transcripts/" },
+          { label: "Markdown Lint", link: "/help/plugins/markdown-lint/" },
+          { label: "Spell Check", link: "/help/plugins/spell-check/" },
+          { label: "Word Count", link: "/help/plugins/word-count/" },
+        ],
+      },
+      {
+        label: "Workspace tools",
+        collapsed: true,
+        items: [
+          { label: "AI", link: "/help/plugins/ai/" },
+          { label: "Bookmarks", link: "/help/plugins/bookmarks/" },
+          { label: "History", link: "/help/plugins/history/" },
+          { label: "Docs", link: "/help/plugins/docs/" },
+          { label: "Terminal", link: "/help/plugins/terminal/" },
+        ],
+      },
+      {
+        label: "Previews and status",
+        collapsed: true,
+        items: [
+          { label: "CV Roles preview", link: "/help/plugins/cv-roles/" },
+          { label: "Nostr Sync preview", link: "/help/plugins/nostr-sync/" },
+          {
+            label: "Community package status",
+            link: "/help/plugins/community-status/",
+          },
+          { label: "Legacy Sync status", link: "/help/plugins/legacy-sync/" },
+        ],
+      },
       { label: "Community plugins", link: "/help/plugins/community-plugins/" },
       { label: "Safe mode", link: "/help/plugins/safe-mode/" },
     ],

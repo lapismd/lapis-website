@@ -9,6 +9,17 @@ published `desktop-v2026.31.6-rc.1` release. Public archive URLs, sizes, digests
 the release's platform limitations are recorded in `snapshots/desktop-release.json`.
 The original authored-page review date remains November 1.
 
+On November 13, a second review added 18 missing plugin guides/status pages and
+updated Bases, Tasks and the overview. All 26 known IDs now map to a dedicated
+page, overview link and sidebar entry. `snapshots/plugins.json` pins the 19-entry
+public catalog plus metadata from shared, standalone and Notes-owned sources;
+raw reviewed metadata is checksummed under `snapshots/plugin-sources/`. Catalog
+signatures were not independently verified during this documentation review.
+`pnpm plugins:check` rejects missing guides, source/catalog omissions, navigation
+gaps and metadata drift without requiring network access or sibling checkouts.
+The site now has 97 authored guides. Original review dates and source revisions
+remain attached to unchanged pages.
+
 Desktop remains a Tauri preview. Public installers require published assets;
 web storage/offline availability is deployment-dependent. Optional plugin
 features are not promised in every Desktop build. Notebook documentation now
@@ -104,3 +115,29 @@ qualification are separate. The live sitemap endpoint returned HTTP 403; the
 | `/help/user-interface/sidebar/`                                  | notes                   | Retain practical guidance; align public names and host/plugin boundaries.                            |
 | `/help/user-interface/tabs/`                                     | notes                   | Retain practical guidance; align public names and host/plugin boundaries.                            |
 | `/help/user-interface/workspace-layout/`                         | notes                   | Retain practical guidance; align public names and host/plugin boundaries.                            |
+
+## November 13 plugin follow-up
+
+| Page                                   | Review                                                                                                                            |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `/help/plugins/ai/`                    | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/bases/`                 | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/bookmarks/`             | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/community-status/`      | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/core-plugins-overview/` | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/csv/`                   | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/cv-roles/`              | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/docs/`                  | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/docx/`                  | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/file-explorer/`         | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/history/`               | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/legacy-sync/`           | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/markdown-lint/`         | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/markdown/`              | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/nostr-sync/`            | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/source-editor/`         | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/spell-check/`           | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/tasks/`                 | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/terminal/`              | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/transcripts/`           | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |
+| `/help/plugins/word-count/`            | Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory. |

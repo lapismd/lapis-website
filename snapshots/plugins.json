@@ -1,0 +1,637 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-13",
+  "catalog": {
+    "url": "https://registry.lapis.md/v2/index.json",
+    "snapshotPath": "snapshots/plugin-sources/catalog.json",
+    "sha256": "9fdfec901a08806de3ead91029cb842518046ff5c47542d3d085f56ed4348218",
+    "signatureVerification": "not-performed"
+  },
+  "sources": {
+    "shared": {
+      "revision": "42bc2291ac6527b05b4996ed5df5d975eefed277",
+      "repository": "https://github.com/lapismd/lapis-plugins",
+      "files": [
+        {
+          "path": "scripts/package-catalog.mjs",
+          "snapshotPath": "snapshots/plugin-sources/shared/scripts/package-catalog.mjs",
+          "sha256": "b21bb5eaeb313223c9161f044a5c9b44243b46811dc054b3878abca1a5e31bb0"
+        },
+        {
+          "path": "packages/ai/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/ai/package.json",
+          "sha256": "62db146e50bb9d9825ce384f754b3f05a04bcf20b47c2fc7bbb0d3bc40bef780"
+        },
+        {
+          "path": "packages/ai/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/ai/manifest.json",
+          "sha256": "42c5aed8947bdd76e48cb8fc7578a70afa4a8c3544ea430a86ceba1daf74293a"
+        },
+        {
+          "path": "packages/bases/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/bases/package.json",
+          "sha256": "68e93bb09a497e9bd1533b937c6ef7da2232bc0f33ebe572bc635015e47d2207"
+        },
+        {
+          "path": "packages/bases/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/bases/manifest.json",
+          "sha256": "d8bfc21f24bf80a65687f88226a6335c236b1f38c5784829b9c43a19e20926e4"
+        },
+        {
+          "path": "packages/bookmarks/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/bookmarks/package.json",
+          "sha256": "5ba1320770577c5cd2d0d3f631af86ea86dd6d9b5887d32950a153bcea1cea8d"
+        },
+        {
+          "path": "packages/bookmarks/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/bookmarks/manifest.json",
+          "sha256": "fee8926903ecce4a606eb691b3bc05938a7b4a4f59eab8aa3d87ce8fca28704d"
+        },
+        {
+          "path": "packages/canvas/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/canvas/package.json",
+          "sha256": "e9f16769c341bcd84359a9ac5dcb5da5bffee770537cb41ad39dfd921a56a247"
+        },
+        {
+          "path": "packages/canvas/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/canvas/manifest.json",
+          "sha256": "04afd009e9932d061aa098ec81c7a472f4dc5a1e0176ea89999a2e3ca8849a84"
+        },
+        {
+          "path": "packages/community/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/community/package.json",
+          "sha256": "716c16dfb750c3b712bc65824e3fd4c3e15d1826a5d4e3ced0e9171b678a4c32"
+        },
+        {
+          "path": "packages/community/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/community/manifest.json",
+          "sha256": "0ddee902f3ce87c1982c7a9861624e36d3ab53dfa57bb73ef985ba3bd961db84"
+        },
+        {
+          "path": "packages/csv/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/csv/package.json",
+          "sha256": "8b8842742118880dcba6d3b277289777ea740dc10f89172eed70827286fd2cb0"
+        },
+        {
+          "path": "packages/csv/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/csv/manifest.json",
+          "sha256": "6e36be35a3b17730c47b35ae91df1925328652f30c5ab856a15801ad89ede525"
+        },
+        {
+          "path": "packages/docx/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/docx/package.json",
+          "sha256": "e2d7384923a76cf09adf839ad2c806ce1ef8b4e3c3022b0ea18e363eb71db274"
+        },
+        {
+          "path": "packages/docx/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/docx/manifest.json",
+          "sha256": "a7330cec9093425ba661360218f970fe00c92e1b16415c0530402dc20cf6e7cd"
+        },
+        {
+          "path": "packages/graph/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/graph/package.json",
+          "sha256": "779423f0b37c4fc551b52eb4f542cecb867ebdca0b9b53c506f2487656c28657"
+        },
+        {
+          "path": "packages/graph/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/graph/manifest.json",
+          "sha256": "731d2439f80261b5ea81aac1c724d9ef345b38a4652cc37d881ead7ece2a3843"
+        },
+        {
+          "path": "packages/history/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/history/package.json",
+          "sha256": "5d5dab55b6f687487ddd72535f6dba3795077c675c142eed9f82901e54c1ee3a"
+        },
+        {
+          "path": "packages/history/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/history/manifest.json",
+          "sha256": "c3ed231a669a7ff6e2a2ae735953b2fe7cb37073e4717ef8d936f8e13d7b7814"
+        },
+        {
+          "path": "packages/markdown/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/markdown/package.json",
+          "sha256": "138b539cb7beac67ec278b69b49965619b799cbf59c57f69b66a7e041a455a39"
+        },
+        {
+          "path": "packages/markdown/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/markdown/manifest.json",
+          "sha256": "67c80dabd822981cd8adb32126c66d6b943ddbbdefae7dd9e679945866bc440f"
+        },
+        {
+          "path": "packages/markdown-lint/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/markdown-lint/package.json",
+          "sha256": "f94e742940ef0167cce956d01d7fde33ad5a02d56377656e6911b77fee08e217"
+        },
+        {
+          "path": "packages/markdown-lint/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/markdown-lint/manifest.json",
+          "sha256": "7999a43c2b392e727740e6dcb923f3dfee399f264aec688c3a4034b9a071b052"
+        },
+        {
+          "path": "packages/pdf/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/pdf/package.json",
+          "sha256": "e42b04235d3a602626e42cdacf682294a46b345c2be805cf3f6a08c055492098"
+        },
+        {
+          "path": "packages/pdf/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/pdf/manifest.json",
+          "sha256": "bd05050619ff5fb6b9513f8102c8b40fd9bf552bf0ee415427d04c502dc76456"
+        },
+        {
+          "path": "packages/search/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/search/package.json",
+          "sha256": "6e35c8f3659028844db6694409e972a799cd2873f95b9fd92558e07c8c85c8b0"
+        },
+        {
+          "path": "packages/search/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/search/manifest.json",
+          "sha256": "803edd78527b9729cd50aee4020ea89dec193a08c46d2da5e08a7a03167ca6d3"
+        },
+        {
+          "path": "packages/slides/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/slides/package.json",
+          "sha256": "43258c1f95390b103c312cd847f65dbb93b5b47de23520ebc899a1d922fb2d17"
+        },
+        {
+          "path": "packages/slides/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/slides/manifest.json",
+          "sha256": "0010e81862c9c7adc2d9a2185d4e7eb3ed2a248c50c2660c16a7872135f3f2f2"
+        },
+        {
+          "path": "packages/source-editor/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/source-editor/package.json",
+          "sha256": "da3e2337b33fdb92c8aecca646e7854c4375e99e73e934bba5754396d4d1448f"
+        },
+        {
+          "path": "packages/source-editor/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/source-editor/manifest.json",
+          "sha256": "f64b0912e0df3880acd7efee05ee6e7759220261deef3eb81150a58eb091e639"
+        },
+        {
+          "path": "packages/spellcheck/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/spellcheck/package.json",
+          "sha256": "e67ec66c03db47ef57db9bfb2fd0c8db2f02d1808522011eafb241fbee3fe119"
+        },
+        {
+          "path": "packages/spellcheck/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/spellcheck/manifest.json",
+          "sha256": "e27baec7de73dff40de43c9133a4a6411eba016e5667dceaa9e2209f67f1b317"
+        },
+        {
+          "path": "packages/sync/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/sync/package.json",
+          "sha256": "f7f79ff5f192ea625cb6fb5b9d2dcb82c30a1067acd7b785dbf9fa7b64c27ad6"
+        },
+        {
+          "path": "packages/sync/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/sync/manifest.json",
+          "sha256": "6f5b8b5c3461cd1862bbee3655ce12c6f726c4be21bca697c11fe18e238d6a96"
+        },
+        {
+          "path": "packages/transcripts/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/transcripts/package.json",
+          "sha256": "92f636bb40fba9a8a780e992d47ff7bb6b2506aaaf0624791d6d184de6377809"
+        },
+        {
+          "path": "packages/transcripts/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/transcripts/manifest.json",
+          "sha256": "08c10c64f1cf420cd8e7f1a1eb1e37566c045796fe283e3c7b577f5533817d96"
+        },
+        {
+          "path": "packages/wordcount/package.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/wordcount/package.json",
+          "sha256": "817d758608556d52feda17a5dd4ff2656f29079fa94e2eb1c3e8c86f099dc43b"
+        },
+        {
+          "path": "packages/wordcount/manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/shared/packages/wordcount/manifest.json",
+          "sha256": "504ca61b2ce7691b02fcf96fa9a96ac7b446059397df3c013f2ff3ad71c4761c"
+        }
+      ]
+    },
+    "notebook": {
+      "revision": "c92afea1794569f1f85e3b5a1ec20ad1ebf51d7a",
+      "repository": "https://github.com/lapismd/lapis-plugin-notebook",
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/notebook/package.json",
+          "sha256": "1310c1d4dca83aa927a36032053c169d3a75c39913cddcbdcdd1e3e2b137f08f"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/notebook/manifest.json",
+          "sha256": "0f60131c4059308c5ada28048398001d73c8fbbf86670a12c20af6b6da13b21b"
+        }
+      ]
+    },
+    "tasks": {
+      "revision": "2f8153328bc1022e522b4fb4b3b23589639f990c",
+      "repository": "https://github.com/lapismd/lapis-plugin-tasks",
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/tasks/package.json",
+          "sha256": "0daa24ecefc1229451603de51568d75814a7caf07c71b4e064966c32448bf640"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/tasks/manifest.json",
+          "sha256": "f2b4fb5fac395eb3279c6e3a93fe5324b2b5b8ae107cf3e967796e160b767c01"
+        }
+      ]
+    },
+    "docs": {
+      "revision": "3b78e7148c78802b88a4ed18aa696ef9d891e811",
+      "repository": "https://github.com/lapismd/lapis-plugin-docs",
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/docs/package.json",
+          "sha256": "8041e92f8cfab7e0f3d103829341b07674c672ae0b2882e5a7edfeec075b0317"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/docs/manifest.json",
+          "sha256": "ac5a4c9cd4845edfe0970d08312a20eb284c11a5071d04eb88b0d3cba75e02e9"
+        }
+      ]
+    },
+    "terminal": {
+      "revision": "cec9a7b38dc4d6acac0b7ec6e3a3612273eafda9",
+      "repository": "https://github.com/lapismd/lapis-plugin-terminal",
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/terminal/package.json",
+          "sha256": "6adef0b9c0f6bac0c2e25d296fc481f76eb7b940c9ad94572fa6c75239272a92"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/terminal/manifest.json",
+          "sha256": "b09a8fcc09afaf74bc9266df230855c8c5b7e3e2e31930c43b3cfb738d483ec6"
+        }
+      ]
+    },
+    "cv-roles": {
+      "revision": "3e9a683fadbc94de6b54288a9980d74f8be7424e",
+      "repository": null,
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/cv-roles/package.json",
+          "sha256": "b76f0ee830da76e2a10a1e56e135bb2b59ab55f24c01cd7864ec1d03b42b906f"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/cv-roles/manifest.json",
+          "sha256": "2de64a9004a788a9175d6d1d45254e9fb9b128aeec3b43d7752c7f751e91eb35"
+        }
+      ]
+    },
+    "nostr-sync": {
+      "revision": "fe4754133736debe3214406ee13a8f378d7dda5d",
+      "repository": null,
+      "files": [
+        {
+          "path": "package.json",
+          "snapshotPath": "snapshots/plugin-sources/nostr-sync/package.json",
+          "sha256": "687fb503bee66b8f7edbf293a2e4f0b941aafb6a981f50561a44591ade553488"
+        },
+        {
+          "path": "manifest.json",
+          "snapshotPath": "snapshots/plugin-sources/nostr-sync/manifest.json",
+          "sha256": "dda0149740ead6e28239234d34180b1b3d8e57b8541dd037204a978acc0b0f0d"
+        }
+      ]
+    },
+    "notes": {
+      "revision": "cdad0cde972f64bc0f20896d493c97268cc97b51",
+      "repository": "https://github.com/lapismd/lapis-notes",
+      "files": [
+        {
+          "path": "packages/file-explorer/package.json",
+          "snapshotPath": "snapshots/plugin-sources/notes/packages/file-explorer/package.json",
+          "sha256": "7dedc9cb8ea93bbc8f333f0da17376ded20ff1188cda19c51d0e96c0268dba32"
+        },
+        {
+          "path": "packages/file-explorer/src/lib/index.ts",
+          "snapshotPath": "snapshots/plugin-sources/notes/packages/file-explorer/src/lib/index.ts",
+          "sha256": "388e8c3ea088f8121706327681a05c7d1eb3aefb3c69af6be187e18bf8ae1d6c"
+        },
+        {
+          "path": "packages/app-profile/src/index.ts",
+          "snapshotPath": "snapshots/plugin-sources/notes/packages/app-profile/src/index.ts",
+          "sha256": "14b9ac4e6c18af16ab16a7738de9d49e6f89886838cb6ddd3000c5000ca01ba4"
+        }
+      ]
+    }
+  },
+  "plugins": [
+    {
+      "id": "ai",
+      "name": "AI",
+      "package": "@lapis-notes/ai",
+      "version": "0.1.10",
+      "source": "shared",
+      "manifestPath": "packages/ai/manifest.json",
+      "packagePath": "packages/ai/package.json",
+      "guide": "/help/plugins/ai/",
+      "status": "catalog",
+      "catalogVersion": "0.1.8"
+    },
+    {
+      "id": "bases",
+      "name": "Bases",
+      "package": "@lapis-notes/bases",
+      "version": "0.3.1",
+      "source": "shared",
+      "manifestPath": "packages/bases/manifest.json",
+      "packagePath": "packages/bases/package.json",
+      "guide": "/help/plugins/bases/",
+      "status": "catalog",
+      "catalogVersion": "0.3.0"
+    },
+    {
+      "id": "bookmarks",
+      "name": "Bookmarks",
+      "package": "@lapis-notes/bookmarks",
+      "version": "0.1.8",
+      "source": "shared",
+      "manifestPath": "packages/bookmarks/manifest.json",
+      "packagePath": "packages/bookmarks/package.json",
+      "guide": "/help/plugins/bookmarks/",
+      "status": "catalog",
+      "catalogVersion": "0.1.6"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "package": "@lapis-notes/community",
+      "version": "0.1.0",
+      "source": "shared",
+      "manifestPath": "packages/community/manifest.json",
+      "packagePath": "packages/community/package.json",
+      "guide": "/help/plugins/community-status/",
+      "status": "parked"
+    },
+    {
+      "id": "docs",
+      "name": "Docs",
+      "package": "@lapis-notes/lapis-plugin-docs",
+      "version": "0.2.1",
+      "source": "docs",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/docs/",
+      "status": "public-source"
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "package": "@lapis-notes/history",
+      "version": "0.2.4",
+      "source": "shared",
+      "manifestPath": "packages/history/manifest.json",
+      "packagePath": "packages/history/package.json",
+      "guide": "/help/plugins/history/",
+      "status": "catalog",
+      "catalogVersion": "0.2.4"
+    },
+    {
+      "id": "lapis-canvas",
+      "name": "Canvas",
+      "package": "@lapis-notes/canvas",
+      "version": "0.3.0",
+      "source": "shared",
+      "manifestPath": "packages/canvas/manifest.json",
+      "packagePath": "packages/canvas/package.json",
+      "guide": "/help/plugins/canvas/",
+      "status": "catalog",
+      "catalogVersion": "0.2.2"
+    },
+    {
+      "id": "lapis-csv",
+      "name": "CSV",
+      "package": "@lapis-notes/csv",
+      "version": "0.2.4",
+      "source": "shared",
+      "manifestPath": "packages/csv/manifest.json",
+      "packagePath": "packages/csv/package.json",
+      "guide": "/help/plugins/csv/",
+      "status": "catalog",
+      "catalogVersion": "0.2.2"
+    },
+    {
+      "id": "lapis-docx",
+      "name": "DOCX",
+      "package": "@lapis-notes/docx",
+      "version": "0.2.1",
+      "source": "shared",
+      "manifestPath": "packages/docx/manifest.json",
+      "packagePath": "packages/docx/package.json",
+      "guide": "/help/plugins/docx/",
+      "status": "catalog",
+      "catalogVersion": "0.2.1"
+    },
+    {
+      "id": "lapis-file-explorer",
+      "name": "File Explorer",
+      "package": "@lapis-notes/file-explorer",
+      "version": "0.2.5",
+      "source": "notes",
+      "manifestPath": "packages/file-explorer/src/lib/index.ts",
+      "packagePath": "packages/file-explorer/package.json",
+      "guide": "/help/plugins/file-explorer/",
+      "status": "shared-profile"
+    },
+    {
+      "id": "lapis-graph",
+      "name": "Graph",
+      "package": "@lapis-notes/graph",
+      "version": "0.1.8",
+      "source": "shared",
+      "manifestPath": "packages/graph/manifest.json",
+      "packagePath": "packages/graph/package.json",
+      "guide": "/help/plugins/graph-view/",
+      "status": "catalog",
+      "catalogVersion": "0.1.6"
+    },
+    {
+      "id": "lapis-markdown-lint",
+      "name": "Markdown Lint",
+      "package": "@lapis-notes/markdown-lint",
+      "version": "0.1.3",
+      "source": "shared",
+      "manifestPath": "packages/markdown-lint/manifest.json",
+      "packagePath": "packages/markdown-lint/package.json",
+      "guide": "/help/plugins/markdown-lint/",
+      "status": "catalog",
+      "catalogVersion": "0.1.3"
+    },
+    {
+      "id": "lapis-notebook",
+      "name": "Notebook",
+      "package": "@lapis-notes/lapis-plugin-notebook",
+      "version": "0.2.4",
+      "source": "notebook",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/notebook/",
+      "status": "catalog",
+      "catalogVersion": "0.2.2"
+    },
+    {
+      "id": "lapis-pdf",
+      "name": "PDF",
+      "package": "@lapis-notes/pdf",
+      "version": "0.2.1",
+      "source": "shared",
+      "manifestPath": "packages/pdf/manifest.json",
+      "packagePath": "packages/pdf/package.json",
+      "guide": "/help/plugins/pdf/",
+      "status": "catalog",
+      "catalogVersion": "0.2.1"
+    },
+    {
+      "id": "lapis-slides",
+      "name": "Slides",
+      "package": "@lapis-notes/slides",
+      "version": "0.1.2",
+      "source": "shared",
+      "manifestPath": "packages/slides/manifest.json",
+      "packagePath": "packages/slides/package.json",
+      "guide": "/help/plugins/slides/",
+      "status": "catalog",
+      "catalogVersion": "0.1.2"
+    },
+    {
+      "id": "lapis-source-editor",
+      "name": "Source Editor",
+      "package": "@lapis-notes/source-editor",
+      "version": "0.1.7",
+      "source": "shared",
+      "manifestPath": "packages/source-editor/manifest.json",
+      "packagePath": "packages/source-editor/package.json",
+      "guide": "/help/plugins/source-editor/",
+      "status": "catalog",
+      "catalogVersion": "0.1.5"
+    },
+    {
+      "id": "lapis-transcripts",
+      "name": "Transcripts",
+      "package": "@lapis-notes/transcripts",
+      "version": "0.2.4",
+      "source": "shared",
+      "manifestPath": "packages/transcripts/manifest.json",
+      "packagePath": "packages/transcripts/package.json",
+      "guide": "/help/plugins/transcripts/",
+      "status": "catalog",
+      "catalogVersion": "0.2.2"
+    },
+    {
+      "id": "markdown",
+      "name": "Markdown",
+      "package": "@lapis-notes/markdown",
+      "version": "0.2.4",
+      "source": "shared",
+      "manifestPath": "packages/markdown/manifest.json",
+      "packagePath": "packages/markdown/package.json",
+      "guide": "/help/plugins/markdown/",
+      "status": "catalog",
+      "catalogVersion": "0.2.3"
+    },
+    {
+      "id": "nostr-sync",
+      "name": "Sync & History",
+      "package": "@lapis-notes/lapis-plugin-nostr-sync",
+      "version": "0.2.0",
+      "source": "nostr-sync",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/nostr-sync/",
+      "status": "source-preview"
+    },
+    {
+      "id": "roles",
+      "name": "CV Roles",
+      "package": "@lapis-notes/lapis-plugin-cv-roles",
+      "version": "0.1.0",
+      "source": "cv-roles",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/cv-roles/",
+      "status": "source-preview"
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "package": "@lapis-notes/search",
+      "version": "0.1.8",
+      "source": "shared",
+      "manifestPath": "packages/search/manifest.json",
+      "packagePath": "packages/search/package.json",
+      "guide": "/help/plugins/search/",
+      "status": "catalog",
+      "catalogVersion": "0.1.6"
+    },
+    {
+      "id": "spellcheck",
+      "name": "Spell Check",
+      "package": "@lapis-notes/spellcheck",
+      "version": "0.1.4",
+      "source": "shared",
+      "manifestPath": "packages/spellcheck/manifest.json",
+      "packagePath": "packages/spellcheck/package.json",
+      "guide": "/help/plugins/spell-check/",
+      "status": "catalog",
+      "catalogVersion": "0.1.4"
+    },
+    {
+      "id": "sync",
+      "name": "Lapis Sync",
+      "package": "@lapis-notes/lapis-plugin-sync",
+      "version": "0.1.0",
+      "source": "shared",
+      "manifestPath": "packages/sync/manifest.json",
+      "packagePath": "packages/sync/package.json",
+      "guide": "/help/plugins/legacy-sync/",
+      "status": "parked"
+    },
+    {
+      "id": "tasks",
+      "name": "Tasks",
+      "package": "@lapis-notes/lapis-plugin-tasks",
+      "version": "0.1.2",
+      "source": "tasks",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/tasks/",
+      "status": "catalog",
+      "catalogVersion": "0.1.2"
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "package": "@lapis-notes/lapis-plugin-terminal",
+      "version": "0.1.0",
+      "source": "terminal",
+      "manifestPath": "manifest.json",
+      "packagePath": "package.json",
+      "guide": "/help/plugins/terminal/",
+      "status": "public-source"
+    },
+    {
+      "id": "wordcount",
+      "name": "Word Count",
+      "package": "@lapis-notes/wordcount",
+      "version": "0.1.3",
+      "source": "shared",
+      "manifestPath": "packages/wordcount/manifest.json",
+      "packagePath": "packages/wordcount/package.json",
+      "guide": "/help/plugins/word-count/",
+      "status": "catalog",
+      "catalogVersion": "0.1.3"
+    }
+  ]
+}

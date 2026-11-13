@@ -1,0 +1,45 @@
+{
+  "id": "nostr-sync",
+  "name": "Sync & History",
+  "version": "0.2.0",
+  "minAppVersion": "0.0.1",
+  "description": "Experimental Nostr-native vault sync with Git-like history.",
+  "author": "Lapis Notes",
+  "distribution": "first-party-external",
+  "provenance": "official",
+  "enabledByDefault": false,
+  "requiredCapabilities": [
+    "metadata:identity",
+    "metadata:changes",
+    "vault:stream",
+    "plugin:generated-state",
+    "network:connect",
+    "crypto:nostr-sync"
+  ],
+  "lapis": {
+    "manifestVersion": 1,
+    "source": "official",
+    "locked": false,
+    "permissions": [
+      "metadata.identity",
+      "metadata.changes",
+      "vault.stream",
+      "plugin.generated-state",
+      "network.connect",
+      "crypto.nostr-sync"
+    ],
+    "runtime": {
+      "entries": {
+        "workspace": {
+          "path": "main.mjs",
+          "format": "esm",
+          "sharedDependencies": [
+            "@lapis-notes/api",
+            "@lapis-notes/api/workspace-host"
+          ],
+          "requiresReloadOnUpdate": false
+        }
+      }
+    }
+  }
+}

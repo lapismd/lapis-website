@@ -8,17 +8,26 @@ of the vault.
 
 This is an optional plugin surface. Confirm it is installed and compatible with your host; see the [owning source](https://github.com/lapismd/lapis-plugins/tree/main/packages/bases).
 
-<figure class="product-media"><img src="/media/bases-banner.light.webp" data-product-theme="light" alt="A Bases table view in Lapis Notes." loading="lazy" width="2400" height="1600" /><img src="/media/bases-banner.dark.webp" data-product-theme="dark" alt="A Bases table view in Lapis Notes." loading="lazy" width="2400" height="1600" /></figure>
+<figure class="product-media"><img src="/media/bases-banner.light.webp" data-product-theme="light" alt="Bases cover cards with project artwork and note properties in Lapis Notes." loading="lazy" width="2400" height="1600" /><img src="/media/bases-banner.dark.webp" data-product-theme="dark" alt="Bases cover cards with project artwork and note properties in Lapis Notes." loading="lazy" width="2400" height="1600" /></figure>
 
 ## What Bases does
 
 Bases reads file fields, frontmatter properties, and formulas from a base
-document, then renders those records as table, card, list, or map-oriented
-views.
+document, then renders those records as tables, cards, grouped lists, Kanban
+boards or Activity views. Map configuration remains inspectable with an explicit
+unavailable state; a working map layout is not provided by this reviewed version.
 
 ## Create a base
 
-Create a `.base` or `.bases` file, then configure filters, properties, formulas, and views. Bases can render table and card-style views over matching notes.
+Create a `.base` or `.bases` file, then configure filters, properties, formulas, and views. Choose a view from the toolbar and use Search, Filter, Sort and Properties to refine the matching notes. Table, Cards and List suit inventories; Kanban groups records into columns, while Activity groups them by a date property.
+
+## Group and review records
+
+Kanban uses a grouping property to organize cards. Activity uses a configured date property, or the first typed date field in the result properties, with newest days first and missing or invalid dates under Undated. Available controls depend on your installed version; these captures come from source version 0.3.1.
+
+<figure class="product-media"><img src="/media/bases-overview.light.webp" data-product-theme="light" alt="A Bases grouped list of projects with grouping and sorting controls open." loading="lazy" width="2400" height="1600" /><img src="/media/bases-overview.dark.webp" data-product-theme="dark" alt="A Bases grouped list of projects with grouping and sorting controls open." loading="lazy" width="2400" height="1600" /></figure>
+
+Editable note properties write back to frontmatter. File-derived fields and formulas remain read-only. Embedded Bases surfaces in Markdown are read-only even when the standalone file view supports editing.
 
 ## Use bases for
 

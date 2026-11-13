@@ -75,16 +75,16 @@
       "storyId": "plugins-bases-registry-screenshots--overview",
       "alt": "Lapis Bases showing a populated project cover-card view with real artwork and useful properties.",
       "theme": "dark",
-      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "revision": "a6a73edfa747980cba7395121e6b380a434986dc",
       "packageName": "@lapis-notes/bases",
-      "version": "0.2.0",
+      "version": "0.3.1",
       "repository": "https://github.com/lapismd/lapis-plugins",
       "viewport": {
         "width": 1200,
         "height": 800
       },
       "deviceScaleFactor": 2,
-      "sha256": "2d0961115467c938b07249bdbbac7d7e4cf5aabc60dd716010b3207bd92401d1"
+      "sha256": "91561a3e01ca85b4c991e6f675a9116330082bc1c993df227316c32c8db2b8ba"
     },
     {
       "path": "media/bases-banner.light.webp",
@@ -92,16 +92,16 @@
       "storyId": "plugins-bases-registry-screenshots--overview",
       "alt": "Lapis Bases showing a populated project cover-card view with real artwork and useful properties.",
       "theme": "light",
-      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "revision": "a6a73edfa747980cba7395121e6b380a434986dc",
       "packageName": "@lapis-notes/bases",
-      "version": "0.2.0",
+      "version": "0.3.1",
       "repository": "https://github.com/lapismd/lapis-plugins",
       "viewport": {
         "width": 1200,
         "height": 800
       },
       "deviceScaleFactor": 2,
-      "sha256": "27895c70d45dc316e355696346c1882e9f76a1344596a0bea1ada80faa4b5bf9"
+      "sha256": "a4a63b36e39b2ee6d59cf11ab34458eb03e1a77ac5736a0e7777f7300bc197a3"
     },
     {
       "path": "media/bases-overview.dark.webp",
@@ -109,16 +109,16 @@
       "storyId": "plugins-bases-registry-screenshots--grouped-list",
       "alt": "Lapis Bases grouped list view with populated project records and grouping controls open.",
       "theme": "dark",
-      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "revision": "a6a73edfa747980cba7395121e6b380a434986dc",
       "packageName": "@lapis-notes/bases",
-      "version": "0.2.0",
+      "version": "0.3.1",
       "repository": "https://github.com/lapismd/lapis-plugins",
       "viewport": {
         "width": 1200,
         "height": 800
       },
       "deviceScaleFactor": 2,
-      "sha256": "f02d7d01a04ecc735ed7185879068e9a21482182c87bd87053f096d80eca9987"
+      "sha256": "dd7d78f46fa348856b1312c39885d03c4b560baac23f64a2aea72dc79a3b4b35"
     },
     {
       "path": "media/bases-overview.light.webp",
@@ -126,16 +126,16 @@
       "storyId": "plugins-bases-registry-screenshots--grouped-list",
       "alt": "Lapis Bases grouped list view with populated project records and grouping controls open.",
       "theme": "light",
-      "revision": "b6e43b7492fc733f2e7106f16c1d8c4ec3867915",
+      "revision": "a6a73edfa747980cba7395121e6b380a434986dc",
       "packageName": "@lapis-notes/bases",
-      "version": "0.2.0",
+      "version": "0.3.1",
       "repository": "https://github.com/lapismd/lapis-plugins",
       "viewport": {
         "width": 1200,
         "height": 800
       },
       "deviceScaleFactor": 2,
-      "sha256": "9bf19ed525a396fd39e018b4195a4d81f13cea0ab3e1179040a12fd7dac91f17"
+      "sha256": "5996ec81ef14d7af61617a1efe70ef5369e7ba986829ed8d33fde63215aa8423"
     },
     {
       "path": "media/canvas-banner.dark.webp",

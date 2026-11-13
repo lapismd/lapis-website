@@ -8,7 +8,7 @@
     "dev": "astro dev --host 127.0.0.1",
     "preview": "astro preview --host 127.0.0.1",
     "build": "astro build",
-    "check": "pnpm check:format && pnpm snapshots:check && astro check",
+    "check": "pnpm check:format && pnpm snapshots:check && pnpm plugins:check && astro check",
     "check:format": "prettier . --check",
     "fmt": "prettier . --write",
     "test": "node --test scripts/*.test.mjs",
@@ -25,7 +25,8 @@
     "spec:first": "spec-validator first",
     "spec:build": "spec-validator build",
     "spec:serve": "spec-validator serve",
-    "spec:index": "spec-validator index"
+    "spec:index": "spec-validator index",
+    "plugins:check": "node scripts/check-plugins.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "0.39.3",

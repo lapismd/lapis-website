@@ -11,6 +11,13 @@
 | LW-BUILD-001  | Frozen installs, checks and static builds MUST work without sibling checkouts or source services. Reviewed snapshots MUST include hashes and provenance and reject unsafe import paths or mismatched content.                                                |
 | LW-DEPLOY-001 | Deployment MUST preserve the lapis-md Pages project and lapis.md domain. Preview and production publication require authorization. Legacy publisher disablement MUST precede the first new production deployment, with a retained rollback deployment.       |
 
+The authored plugin inventory MUST cover every plugin in the reviewed public
+catalog and source manifests with a dedicated guide or explanatory status page,
+an overview link and navigation. Catalog versions, source revisions and raw
+metadata checksums MUST remain distinct. Private previews and parked packages
+MUST NOT be presented as generally available installs. Coverage checks MUST run
+offline during ordinary website validation.
+
 ## Ownership
 
 Website content and presentation live here. Notes owns API definitions and their

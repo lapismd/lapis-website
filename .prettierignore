@@ -10,3 +10,4 @@ dist/
 .wrangler/
 test-results/
 playwright-report/
+snapshots/plugin-sources/

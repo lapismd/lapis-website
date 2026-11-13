@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-01",
-  "scope": "All 79 authored help/developer pages reviewed against source contracts, imported APIs and capture evidence. This is documentation review, not new native platform qualification.",
+  "scope": "All 97 authored help/developer pages reviewed against source contracts, imported APIs and capture evidence. Original 79-page review retained with November 13 follow-up for new and revised guides. This is documentation review, not new native platform qualification.",
   "sources": {
     "notes": {
       "repository": "https://github.com/lapismd/lapis-notes",
@@ -67,6 +67,11 @@
         "packages/mira/src/preview/remark/custom-checklists.test.ts"
       ],
       "note": "Local portable syntax source reviewed; capture validation uses the separately recorded released consumer cohort."
+    },
+    "plugin-inventory": {
+      "snapshot": "snapshots/plugins.json",
+      "reviewedOn": "2026-11-13",
+      "note": "Pinned public catalog and source metadata for all 26 known plugin IDs; private previews and parked packages have status pages rather than install links."
     }
   },
   "files": [
@@ -444,11 +449,25 @@
       "sha256": "d534c36edce04a6d4b4c84607ef314bd34330a225b378e14cb4b462aa7941063"
     },
     {
+      "path": "src/content/docs/help/plugins/ai.md",
+      "route": "/help/plugins/ai/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "657065b3a0821a660e954ff385a6e5daf9bcf8f1f2df48e6609e75ee59628cbf"
+    },
+    {
       "path": "src/content/docs/help/plugins/bases.md",
       "route": "/help/plugins/bases/",
-      "sources": ["notes", "plugins", "desktop"],
-      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
-      "sha256": "0d12ca32489eb71375757e767414d7e33ee86c3e43d695b3318e3cad8067e145"
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "24079cf3ce94638def198cf1a259f796248df89c47468af0eb4c7029ab3335c6"
+    },
+    {
+      "path": "src/content/docs/help/plugins/bookmarks.md",
+      "route": "/help/plugins/bookmarks/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "c9e742602600f59516cacddf295933c081a321ec95ce65294a2bea445d256c19"
     },
     {
       "path": "src/content/docs/help/plugins/canvas.md",
@@ -465,11 +484,53 @@
       "sha256": "38af23dfedcb363a9806502a04c0e8d69a98fdaabd611ccd92730667487c9fb3"
     },
     {
+      "path": "src/content/docs/help/plugins/community-status.md",
+      "route": "/help/plugins/community-status/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "50363a3a7bd10d2b173b020fd5aea2c74919b32ba5f2b8785c5c1ffa51399f1b"
+    },
+    {
       "path": "src/content/docs/help/plugins/core-plugins-overview.md",
       "route": "/help/plugins/core-plugins-overview/",
-      "sources": ["notes", "plugins", "desktop"],
-      "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
-      "sha256": "2364632023bf777a3c4672b3522c6be1f9c1e1ee01b12c032f70cd1bc3d60f6a"
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "3902bcce2de77b33df5298e0be5623f3e5821eb6e4a008f1a80c5eda7e1d68f9"
+    },
+    {
+      "path": "src/content/docs/help/plugins/csv.md",
+      "route": "/help/plugins/csv/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "9dd279f6367a9bf289bcc4cc81c22898c3fe9019f2ed6ba51664f79fad95f8e9"
+    },
+    {
+      "path": "src/content/docs/help/plugins/cv-roles.md",
+      "route": "/help/plugins/cv-roles/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "30575f6cbb4034cf30edef71b5a0d239e99cc02949e8e3bf66982abcfcd2efd9"
+    },
+    {
+      "path": "src/content/docs/help/plugins/docs.md",
+      "route": "/help/plugins/docs/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "cc4593acc9967c985e912af6cad8360f5a915332e0345c5af160fa1782a5564e"
+    },
+    {
+      "path": "src/content/docs/help/plugins/docx.md",
+      "route": "/help/plugins/docx/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "85c77a4116b98ac6105f2c4f6b7133a17dbe39070f05d74b3d4390d4364f09ab"
+    },
+    {
+      "path": "src/content/docs/help/plugins/file-explorer.md",
+      "route": "/help/plugins/file-explorer/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "c56a754ac3b15ae67aa93c5892594d1105e95a1a75915f44f6e09ee4cdd05ec3"
     },
     {
       "path": "src/content/docs/help/plugins/graph-view.md",
@@ -477,6 +538,41 @@
       "sources": ["notes", "plugins", "desktop"],
       "review": "Distinguish installed host profile from optional plugins; use source-owned captures.",
       "sha256": "4fb82ad4b1d950eec2c8ac35ee661374dda1d4dbffdc8dfacb1ffbdae315ac54"
+    },
+    {
+      "path": "src/content/docs/help/plugins/history.md",
+      "route": "/help/plugins/history/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "fa47e298592d7f2f5b9346943804dd43d0e1f41348f501f35d67fa2457b786e6"
+    },
+    {
+      "path": "src/content/docs/help/plugins/legacy-sync.md",
+      "route": "/help/plugins/legacy-sync/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "ae2b57f381a9445a917dc407bc7543ca2a254233d5f532017a97cc0a195df050"
+    },
+    {
+      "path": "src/content/docs/help/plugins/markdown-lint.md",
+      "route": "/help/plugins/markdown-lint/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "c51d7d601d536975e568e303f6332ff5a6fdb572f56ed4a924725850d2fd65ae"
+    },
+    {
+      "path": "src/content/docs/help/plugins/markdown.md",
+      "route": "/help/plugins/markdown/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "a2cc05fe10c217df16274ba6e7795d2154b6f30f86b2bf71350d7ef542223caf"
+    },
+    {
+      "path": "src/content/docs/help/plugins/nostr-sync.md",
+      "route": "/help/plugins/nostr-sync/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "de9af061b4d3944e6ec2469994d27c4be1f377fa2f1ca8e6e8ba0274658d8524"
     },
     {
       "path": "src/content/docs/help/plugins/notebook/cells-and-syntax.md",
@@ -563,11 +659,46 @@
       "sha256": "cda89d385d82a3b371f69ca54778ff13e07f88ae20ba8e55348d1123021b54b4"
     },
     {
+      "path": "src/content/docs/help/plugins/source-editor.md",
+      "route": "/help/plugins/source-editor/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "42b2943f8109bfa4ef0319a26995ab978ba541708146fdaab43efbcb34daf51b"
+    },
+    {
+      "path": "src/content/docs/help/plugins/spell-check.md",
+      "route": "/help/plugins/spell-check/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "cadf677cd94448b208e12573389ae202a0a8cef2ee3e8db3d57848a06250a581"
+    },
+    {
       "path": "src/content/docs/help/plugins/tasks.md",
       "route": "/help/plugins/tasks/",
-      "sources": ["desktop", "tasks"],
-      "review": "Replace legacy view promises with current Desktop indexing/query status and owning-source link.",
-      "sha256": "ac7144b84c35bd80c3cbec97ab33898697f41863ba35131260cfd7fa25e3e239"
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "409e09f0be5fc2b426e62f9dd131eca884df39a136e7cf139dc73494a7802673"
+    },
+    {
+      "path": "src/content/docs/help/plugins/terminal.md",
+      "route": "/help/plugins/terminal/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "b933394ea3543054d203ac36041e64495f28db45e0bd39f48db5af4b719c0f04"
+    },
+    {
+      "path": "src/content/docs/help/plugins/transcripts.md",
+      "route": "/help/plugins/transcripts/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "57728efe1cbca2bb4f38f27db8ebf1746ec54fbc5567ac346ed69a4fa4975068"
+    },
+    {
+      "path": "src/content/docs/help/plugins/word-count.md",
+      "route": "/help/plugins/word-count/",
+      "sources": ["plugin-inventory"],
+      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
+      "sha256": "b8dbd7c5ad679e1df6c8d681e30327f7242a8dfeae0f635555eee2673212169b"
     },
     {
       "path": "src/content/docs/help/user-interface/command-palette.md",
@@ -634,6 +765,34 @@
       "paths": [
         "src/content/docs/help/desktop-and-web/desktop-app.md",
         "src/content/docs/help/getting-started/download-and-install.md"
+      ]
+    },
+    {
+      "reviewedOn": "2026-11-13",
+      "scope": "Complete 26-plugin documentation inventory; current Tasks planner and Bases layouts/media",
+      "evidence": "snapshots/plugins.json",
+      "paths": [
+        "src/content/docs/help/plugins/ai.md",
+        "src/content/docs/help/plugins/bases.md",
+        "src/content/docs/help/plugins/bookmarks.md",
+        "src/content/docs/help/plugins/community-status.md",
+        "src/content/docs/help/plugins/core-plugins-overview.md",
+        "src/content/docs/help/plugins/csv.md",
+        "src/content/docs/help/plugins/cv-roles.md",
+        "src/content/docs/help/plugins/docs.md",
+        "src/content/docs/help/plugins/docx.md",
+        "src/content/docs/help/plugins/file-explorer.md",
+        "src/content/docs/help/plugins/history.md",
+        "src/content/docs/help/plugins/legacy-sync.md",
+        "src/content/docs/help/plugins/markdown-lint.md",
+        "src/content/docs/help/plugins/markdown.md",
+        "src/content/docs/help/plugins/nostr-sync.md",
+        "src/content/docs/help/plugins/source-editor.md",
+        "src/content/docs/help/plugins/spell-check.md",
+        "src/content/docs/help/plugins/tasks.md",
+        "src/content/docs/help/plugins/terminal.md",
+        "src/content/docs/help/plugins/transcripts.md",
+        "src/content/docs/help/plugins/word-count.md"
       ]
     }
   ]

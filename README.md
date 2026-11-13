@@ -43,7 +43,7 @@ pnpm media:import --registry /absolute/path/to/lapis-plugins
 pnpm snapshots:check
 ```
 
-Use `--plugin markdown` on a registry media import to refresh only that plugin's
+Use `--plugin markdown` or `--plugin bases` on a registry media import to refresh only that plugin's
 reviewed banner and overview, preserving other reviewed snapshot revisions.
 
 API exports contain raw Markdown and a versioned checksum manifest; this website
@@ -72,12 +72,27 @@ Notebook's inventory is `stories/catalog/website-media.json`. Both themes use a
 not native qualification or visual-baseline approval. Review the source story,
 source revision, checksums and site presentation with each import.
 
+## Plugin inventory review
+
+`snapshots/plugins.json` records all 26 reviewed plugin IDs, catalog versions,
+source versions/revisions, availability and guide routes. Raw reviewed catalog
+and package metadata live under `snapshots/plugin-sources/` with checksums.
+`pnpm plugins:check` runs offline and requires every source/catalog entry to
+have a dedicated guide or status page, an overview link and sidebar navigation.
+
+When reviewing newer source or catalog metadata, update the snapshot, add any
+missing guide/navigation entries, and update the authored audit hashes and
+follow-up evidence. Keep previews and parked packages distinct from installable
+catalog entries. Catalog and source versions can differ. Do not add installation
+links for packages whose public availability has not been confirmed.
+
 ## Delivery
 
 See [the cutover runbook](docs/deployment.md). GitHub Actions checks are separate
 from the manually dispatched deployment workflow. Neither commits nor pushes
-publish the website automatically. The source repository is intended to be
-`github.com/lapismd/lapis-website`; remote creation and publication are separate.
+publish the website automatically. The source is [lapismd/lapis-website](https://github.com/lapismd/lapis-website).
+Production uses the existing Cloudflare Pages project and domain; the cutover
+receipt records the retained rollback deployment.
 
 ## Licensing and provenance
 
