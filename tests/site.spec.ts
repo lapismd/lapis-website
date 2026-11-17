@@ -236,11 +236,30 @@ for (const width of [375, 1440]) {
     }
     const content = page.locator(".sl-markdown-content");
     await expect(content).toContainText("26 known plugins");
-    await expect(content.locator("table tbody tr")).toHaveCount(19);
+    const activeRows = content.locator("table tbody tr");
+    await expect(activeRows).toHaveCount(18);
+    await expect(
+      activeRows.getByRole("link", { name: "AI", exact: true }),
+    ).toHaveCount(0);
     await page.screenshot({
       path: testInfo.outputPath("plugin-overview.png"),
       fullPage: true,
     });
+    await content.getByRole("link", { name: "AI", exact: true }).click();
+    await expect(page.locator("h1")).toHaveText("AI");
+    await expect(content).toContainText("retired");
+    await expect(content).toContainText("Keep existing data in place");
+    await expect(
+      content.getByRole("link", { name: "Desktop AI", exact: true }),
+    ).toHaveAttribute(
+      "href",
+      "https://github.com/lapismd/lapis-desktop/tree/main/src/components/ai",
+    );
+    await expect(
+      content.locator('a[href*="lapis-plugins/tree/main/packages/ai"]'),
+    ).toHaveCount(0);
+    await expect(content.locator('img[src*="/media/ai-"]')).toHaveCount(0);
+    await page.goto("/help/plugins/core-plugins-overview/");
     await content.getByRole("link", { name: "Docs", exact: true }).click();
     await expect(page.locator("h1")).toHaveText("Docs");
     await expect(page.locator(".sl-markdown-content")).toContainText(

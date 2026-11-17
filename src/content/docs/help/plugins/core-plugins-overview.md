@@ -5,7 +5,7 @@ description: Find every reviewed first-party plugin and understand its availabil
 
 First-party plugins are independently versioned. Your Desktop or web build determines which are bundled, installed and enabled. Review the installed plugin list in Settings before following a guide.
 
-This inventory was reviewed on November 13, 2026: **26 known plugins**, including public catalog entries, host-dependent packages, source previews and parked packages. The website keeps a checked source snapshot for each entry; a source version can be newer than the published catalog version below.
+This inventory was reviewed on November 13, 2026: **26 known plugins**, including public catalog entries, host-dependent packages, source previews, parked packages and retired shared AI. The website keeps a checked source snapshot for each entry; a source version can be newer than the published catalog version below.
 
 ## Shared default profile
 
@@ -13,11 +13,10 @@ The reviewed Notes profile enables [Source Editor](/help/plugins/source-editor/)
 
 ## Published catalog
 
-These 19 plugins appeared in the [public catalog](https://registry.lapis.md/v2/index.json). A catalog entry does not prove that your host bundles it or meets its runtime requirements. Follow the host's [plugin installation workflow](/help/plugins/community-plugins/).
+These 18 active plugin entries appeared in the [public catalog](https://registry.lapis.md/v2/index.json). A catalog entry does not prove that your host bundles it or meets its runtime requirements. Follow the host's [plugin installation workflow](/help/plugins/community-plugins/).
 
 | Plugin                                        | Use                                    | Catalog version |
 | --------------------------------------------- | -------------------------------------- | --------------- |
-| [AI](/help/plugins/ai/)                       | Agent chat and tool approvals          | 0.1.8           |
 | [Bases](/help/plugins/bases/)                 | Structured note-property views         | 0.3.0           |
 | [Bookmarks](/help/plugins/bookmarks/)         | File, folder and search shortcuts      | 0.1.6           |
 | [Canvas](/help/plugins/canvas/)               | Spatial note canvases                  | 0.2.2           |
@@ -61,3 +60,7 @@ Public package or catalog installation was not confirmed for these previews. Use
 Screenshots demonstrate their named plugin or Desktop scene. They do not imply that every preview includes those plugins. Report application integration issues to [Desktop](https://github.com/lapismd/lapis-desktop/issues), plugin behavior to the owner linked from its guide, and website errors to [this website](https://github.com/lapismd/lapis-website/issues).
 
 Use [Safe Mode](/help/plugins/safe-mode/) when diagnosing plugin-related startup problems.
+
+## Bundled AI and retired shared package
+
+[AI](/help/plugins/ai/) in current Desktop builds is owned by the Tauri application. The external shared AI package is retired. It remains in the historical 19-entry catalog snapshot for provenance, and is excluded from active installation guidance. Keep existing AI settings, conversations and memory.

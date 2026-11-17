@@ -16,7 +16,11 @@ catalog and source manifests with a dedicated guide or explanatory status page,
 an overview link and navigation. Catalog versions, source revisions and raw
 metadata checksums MUST remain distinct. Private previews and parked packages
 MUST NOT be presented as generally available installs. Coverage checks MUST run
-offline during ordinary website validation.
+offline during ordinary website validation. Retired shared `@lapis-notes/ai`
+MUST be identified as retired rather than offered as an active catalog install.
+Current AI guidance MUST point to Desktop-owned bundled/native functionality.
+Historical source/media provenance MUST remain distinguishable from current
+promotion; new shared-AI media imports MUST fail before writing assets.
 
 ## Ownership
 
