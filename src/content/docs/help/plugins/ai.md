@@ -1,18 +1,22 @@
 ---
 title: AI
-description: Agent chat with host-provided providers and tools.
+description: Bundled Desktop AI and the retired shared plugin.
 ---
 
-AI adds agent conversations, tool activity and approval controls to Lapis. It is an optional plugin; a compatible agent provider must also be configured by your host.
+Current AI functionality is owned by the [Tauri Desktop application](https://github.com/lapismd/lapis-desktop). It uses the app's native integration; installing the old shared AI plugin or starting its Deno controller is unnecessary.
 
-## Start a conversation
+## Use the AI supplied by your host
 
-Enable AI in your build's plugin settings, open its chat surface and choose an available provider. Ask about a focused task and inspect the tool transcript as the agent works. Review requested actions before granting approval.
+Use the AI controls available in your Desktop build and configure a supported agent client through the host. Inspect tool activity and review requested actions before granting approval. Available clients and tools depend on the host and its configuration.
 
-Provider availability differs between Desktop and web. Native agent runtimes require host support; installing the plugin cannot give a browser native process access. Network providers need connectivity and may send the selected context to their service. Review the provider's settings before sharing private notes.
+A standalone browser cannot start native agent processes. AI in a browser requires a supporting host; installing a plugin cannot add native process access. Network providers may send selected context to their service, so review the provider configuration before sharing private notes.
 
-If no provider appears, check the host's agent configuration and plugin compatibility. A plugin installation alone does not configure an account or runtime.
+## Retired external plugin
 
-## Source and availability
+The shared `@lapis-notes/ai` package from `lapis-plugins` is retired and is no longer an active installation recommendation. Historical catalog versions and media describe that former implementation, not proof of current native behavior. See [plugin availability](/help/plugins/core-plugins-overview/).
 
-[Owning source](https://github.com/lapismd/lapis-plugins/tree/main/packages/ai). Check [plugin availability](/help/plugins/core-plugins-overview/) and your build's installed plugin list before following this guide.
+Retirement does not require deleting settings, conversations or memory. Keep existing data in place and use the host's normal enable/disable controls. The bundled/native implementation retains the AI identity; an old external package is not a replacement for the host integration.
+
+## Owning source
+
+[Desktop AI](https://github.com/lapismd/lapis-desktop/tree/main/src/components/ai) and [Notes native chat](https://github.com/lapismd/lapis-notes/tree/main/packages/app-profile/src/native-chat) own the current implementations. Their release and host support determine availability in your build.

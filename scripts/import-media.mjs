@@ -4,6 +4,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { hash, readArtifactFile, verifyArtifact } from "./artifacts.mjs";
+import { assertActiveMediaPackage } from "./retired-shared-ai.mjs";
 
 const args = process.argv.slice(2);
 assert.ok(
@@ -52,7 +53,6 @@ if (args[0] === "--registry") {
     "slides",
     "community",
     "history",
-    "ai",
   ];
   if (args[3]) assert.ok(plugins.includes(args[3]), "Unknown plugin selection");
   for (const plugin of args[3] ? [args[3]] : plugins) {
@@ -86,6 +86,7 @@ if (args[0] === "--registry") {
   const artifact = await verifyArtifact(source, "lapis-website-media");
   assert.match(artifact.version, /^\d+\.\d+\.\d+/);
   assert.ok(artifact.packageName);
+  assertActiveMediaPackage(artifact.packageName);
   captures = artifact.files.map((file) => ({
     ...file,
     revision: artifact.revision,
@@ -99,6 +100,7 @@ if (args[0] === "--registry") {
 const validated = [];
 const destinations = new Set();
 for (const capture of captures) {
+  assertActiveMediaPackage(capture.packageName);
   assert.ok(
     !destinations.has(capture.path),
     `Duplicate media path: ${capture.path}`,

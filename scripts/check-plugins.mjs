@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { hash, readArtifactFile, filesUnder } from "./artifacts.mjs";
+import { isRetiredSharedAi } from "./retired-shared-ai.mjs";
 
 export async function checkPlugins(root = ".") {
   const read = (name) => readArtifactFile(root, name);
@@ -50,6 +51,7 @@ export async function checkPlugins(root = ".") {
     assert.ok(
       [
         "catalog",
+        "retired",
         "shared-profile",
         "public-source",
         "source-preview",
@@ -69,7 +71,19 @@ export async function checkPlugins(root = ".") {
     }
     const published = catalog.plugins.find((item) => item.id === plugin.id);
     assert.equal(plugin.catalogVersion, published?.latestVersion);
-    assert.equal(plugin.status === "catalog", Boolean(published));
+    const retired = isRetiredSharedAi(plugin.package);
+    if (retired)
+      assert.equal(
+        plugin.status,
+        "retired",
+        "Retired shared-AI must not be promoted as an active install",
+      );
+    if (plugin.status === "retired")
+      assert.ok(
+        retired,
+        "Unknown retired package requires an explicit owner decision",
+      );
+    assert.equal(plugin.status === "catalog", Boolean(published) && !retired);
     if (plugin.source === "shared")
       assert.equal(plugin.status === "parked", Boolean(pkg.private));
     const filename = `src/content/docs${plugin.guide.slice(0, -1)}.md`;

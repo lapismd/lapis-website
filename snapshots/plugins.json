@@ -337,7 +337,7 @@
       "manifestPath": "packages/ai/manifest.json",
       "packagePath": "packages/ai/package.json",
       "guide": "/help/plugins/ai/",
-      "status": "catalog",
+      "status": "retired",
       "catalogVersion": "0.1.8"
     },
     {

@@ -48,8 +48,8 @@ importers:
         specifier: ^4.11.1
         version: 4.14.0(playwright-core@1.64.1)
       '@lapismd/spec-validator':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.2.1
+        version: 0.2.1
       '@lapismd/storybook-addon-visual-delta':
         specifier: ^0.1.0
         version: 0.1.0(playwright@1.64.1)(react@19.3.1)(storybook@10.6.5(prettier@3.3.3)(react@19.3.1))(vite@7.3.7(@types/node@24.19.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.1))
@@ -948,8 +948,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@lapismd/spec-validator@0.2.0':
-    resolution: {integrity: sha512-fUMh7fpoZXuMRAc5Jdo+Y2sUhAPeO5o5R5AIdwKEs/xNLS2W3mSSHimscxI58JuUEFPPk/SI+jE0Vcvv7gXdlw==}
+  '@lapismd/spec-validator@0.2.1':
+    resolution: {integrity: sha512-aHLByppZkay1axSm8KvCwOJz0si8aDyZBXDGWW+d2VQw+66f1KLimw2rEMjYIpLdoSG9+yN5Kd1MKlAJw7xUVw==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4566,7 +4566,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@lapismd/spec-validator@0.2.0':
+  '@lapismd/spec-validator@0.2.1':
     dependencies:
       jiti: 2.7.0
       typescript: 5.9.3

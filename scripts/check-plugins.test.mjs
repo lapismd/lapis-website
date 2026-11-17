@@ -1,9 +1,21 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cp, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import {
+  cp,
+  mkdir,
+  mkdtemp,
+  readFile,
+  rm,
+  stat,
+  writeFile,
+} from "node:fs/promises";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
+import { hash } from "./artifacts.mjs";
 import os from "node:os";
 import path from "node:path";
 import { checkPlugins } from "./check-plugins.mjs";
+import { assertActiveMediaPackage } from "./retired-shared-ai.mjs";
 
 async function fixture(t) {
   const root = await mkdtemp(path.join(os.tmpdir(), "lapis-plugin-docs-"));
@@ -52,4 +64,59 @@ test("changed source metadata requires a reviewed checksum update", async (t) =>
     "{}",
   );
   await assert.rejects(checkPlugins(root), /Plugin source drift/);
+});
+
+test("retired shared AI cannot be promoted as an active catalog install", async (t) => {
+  const root = await fixture(t);
+  const filename = path.join(root, "snapshots/plugins.json");
+  const data = JSON.parse(await readFile(filename));
+  data.plugins.find((plugin) => plugin.package === "@lapis-notes/ai").status =
+    "catalog";
+  await writeFile(filename, JSON.stringify(data));
+  await assert.rejects(checkPlugins(root), /retired shared.AI/i);
+});
+
+test("retired shared media is refused while native and independent AI stay allowed", () => {
+  assert.throws(
+    () => assertActiveMediaPackage("@lapis-notes/ai"),
+    /Retired shared-AI media/,
+  );
+  assert.doesNotThrow(() => assertActiveMediaPackage("@lapismd/ai"));
+  assert.doesNotThrow(() =>
+    assertActiveMediaPackage("@lapismd/mira-plugin-ai"),
+  );
+});
+
+test("the actual artifact importer rejects retired shared-AI media before writes", async (t) => {
+  const root = await fixture(t);
+  const source = path.join(root, "retired-artifact");
+  await mkdir(source);
+  const bytes = Buffer.from("retired media fixture");
+  await writeFile(path.join(source, "old.png"), bytes);
+  await writeFile(
+    path.join(source, "manifest.json"),
+    JSON.stringify({
+      schemaVersion: 1,
+      kind: "lapis-website-media",
+      revision: "a".repeat(40),
+      packageName: "@lapis-notes/ai",
+      version: "0.1.15",
+      files: [{ path: "old.png", sha256: hash(bytes) }],
+    }),
+  );
+  const ledger = path.join(root, "snapshots/media.json");
+  const before = await readFile(ledger, "utf8");
+  const result = spawnSync(
+    process.execPath,
+    [
+      fileURLToPath(new URL("./import-media.mjs", import.meta.url)),
+      "--artifact",
+      source,
+    ],
+    { cwd: root, encoding: "utf8" },
+  );
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /Retired shared-AI media/);
+  assert.equal(await readFile(ledger, "utf8"), before);
+  await assert.rejects(stat(path.join(root, "public")), { code: "ENOENT" });
 });

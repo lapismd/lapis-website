@@ -452,8 +452,8 @@
       "path": "src/content/docs/help/plugins/ai.md",
       "route": "/help/plugins/ai/",
       "sources": ["plugin-inventory"],
-      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
-      "sha256": "657065b3a0821a660e954ff385a6e5daf9bcf8f1f2df48e6609e75ee59628cbf"
+      "review": "Reviewed retired shared AI against the November 17 source landing; current Desktop/native ownership and preserved settings/conversation/memory guidance remain distinct from historical catalog/source/media snapshots.",
+      "sha256": "09f9fe7b788012a0e8c511a9cd7bee94a184e5f07af493e8c429e586381cd3fc"
     },
     {
       "path": "src/content/docs/help/plugins/bases.md",
@@ -494,8 +494,8 @@
       "path": "src/content/docs/help/plugins/core-plugins-overview.md",
       "route": "/help/plugins/core-plugins-overview/",
       "sources": ["plugin-inventory"],
-      "review": "Reviewed plugin behavior, host availability, source/catalog distinction and source-owned media against the November 13 inventory.",
-      "sha256": "3902bcce2de77b33df5298e0be5623f3e5821eb6e4a008f1a80c5eda7e1d68f9"
+      "review": "Reviewed retired shared AI against the November 17 source landing; current Desktop/native ownership and preserved settings/conversation/memory guidance remain distinct from historical catalog/source/media snapshots.",
+      "sha256": "a784267cde11038479d865a88eca7a8070b245140145308cfadf71f895da75af"
     },
     {
       "path": "src/content/docs/help/plugins/csv.md",
